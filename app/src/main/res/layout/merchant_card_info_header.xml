@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:id="@+id/card_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        >
+        <ImageView
+            android:id="@+id/card_image"
+            android:layout_width="278dp"
+            android:layout_height="156dp"
+            android:src="@drawable/orangecard"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            />
+        <ImageView
+            android:id="@+id/card_logo_iv"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/card_logo"
+            android:layout_alignLeft="@+id/card_image"
+            android:layout_alignTop="@+id/card_image"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="18dp"
+            />
+
+        <TextView
+            android:id="@+id/card_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:layout_alignTop="@+id/card_logo_iv"
+            android:layout_toRightOf="@+id/card_logo_iv"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="-3dp"
+            android:text="普通会员"
+            />
+
+        <TextView
+            android:id="@+id/en_card_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:text="More Plain"
+            android:layout_alignBottom="@+id/card_logo_iv"
+            android:layout_toRightOf="@+id/card_logo_iv"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="-3dp"
+            />
+
+
+        <TextView
+            android:id="@+id/disrate_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="折"
+            android:textColor="@color/white"
+            android:layout_alignBottom="@+id/card_logo_iv"
+            android:layout_alignRight="@+id/card_image"
+            android:layout_marginRight="16dp"
+            android:textSize="12sp"
+            />
+
+        <TextView
+            android:id="@+id/disrate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/card_logo_iv"
+            android:layout_toLeftOf="@+id/disrate_tag"
+            android:textSize="32sp"
+            android:text="9"
+            android:textColor="@color/white"
+            />
+
+
+    </RelativeLayout>
+
+
+
+
+
+</LinearLayout>

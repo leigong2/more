@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+    >
+
+    <include
+        android:id="@+id/nav_layout"
+        layout="@layout/details_navi_bar"/>
+
+    <RelativeLayout
+        android:id="@+id/bind_phone_lay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/nav_layout">
+
+        <TextView
+            android:id="@+id/addressName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:text="绑定手机号"
+            android:textColor="@color/mainItemTagTitle"/>
+
+        <ImageView
+            android:id="@+id/iv_into"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/arrow_next"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/mainItemDvider"
+            />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_bind_phone_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/iv_into"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rename_pwd_lay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/bind_phone_lay">
+
+        <TextView
+            android:id="@+id/questionName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:text="修改密码"
+            android:textColor="@color/mainItemTagTitle"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/arrow_next"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/mainItemDvider"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/question_lay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/rename_pwd_lay">
+
+        <TextView
+            android:id="@+id/aboutName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:text="密保问题"
+            android:textColor="@color/mainItemTagTitle"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/arrow_next"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/mainItemDvider"
+            />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/exitAccountButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/mainItemDvider"
+        android:text="退出当前账号"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        />
+
+</RelativeLayout>

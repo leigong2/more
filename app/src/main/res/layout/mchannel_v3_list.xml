@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/no_data_view"
+        layout="@layout/no_data_view"
+        android:visibility="gone"/>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/nestedSV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.moreclub.moreapp.main.ui.view.RecyclerViewUpRefresh
+            android:id="@+id/xRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+        </com.moreclub.moreapp.main.ui.view.RecyclerViewUpRefresh>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+</LinearLayout>

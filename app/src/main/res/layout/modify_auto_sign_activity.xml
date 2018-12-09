@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    >
+
+    <include
+        android:id="@+id/nav_layout"
+        layout="@layout/details_navi_bar" />
+
+    <com.jcodecraeer.xrecyclerview.XRecyclerView
+        android:id="@+id/xRecyclerView"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.jcodecraeer.xrecyclerview.XRecyclerView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="90dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        >
+
+        <Button
+            android:id="@+id/modifyButton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            style="?android:attr/borderlessButtonStyle"
+            android:background="@drawable/merchantmap_btn"
+            android:text="发送"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="16dp"
+            android:textColor="@color/black"
+            />
+
+        <TextView
+            android:id="@+id/noModify"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="放弃本次签到"
+            android:textSize="14sp"
+            android:textColor="@color/mainTagName"
+            android:layout_gravity="center_horizontal"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/white">
+
+    <com.moreclub.common.ui.view.scrollview.ObservableScrollView
+        android:id="@+id/ucenterScrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fadingEdge="none"
+        android:fadingEdgeLength="0dp"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ucenter_top_layout_height"
+                android:background="@color/black"
+                android:orientation="vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/ucenter_avatar"
+                    android:layout_width="@dimen/ucenter_avatar_width"
+                    android:layout_height="@dimen/ucenter_avatar_width"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="72dp"
+                    app:civ_border_color="@color/white"
+                    app:civ_border_width="2dp"/>
+
+                <TextView
+                    android:id="@+id/ucenter_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ucenter_avatar"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="12dp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/ucenter_username_size"
+                    android:textStyle="bold"/>
+
+
+                <HorizontalScrollView
+                    android:id="@+id/ucenter_hs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="112dp"
+                    android:layout_alignParentBottom="true"
+                    android:fadingEdge="none"
+                    android:overScrollMode="never"
+                    android:scrollbars="none">
+
+                    <include
+                        android:id="@+id/ucenter_hs_child"
+                        layout="@layout/ucenter_hs_child"/>
+                </HorizontalScrollView>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="21dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="-1dp">
+
+                    <ProgressBar
+                        android:id="@+id/ucenter_lock_top_progress"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="4dp"
+                        android:layout_centerVertical="true"
+                        android:progressDrawable="@drawable/ucenter_progressbar"
+                        />
+
+                    <ImageView
+                        android:id="@+id/ucenter_left_ball"
+                        android:layout_width="21dp"
+                        android:layout_height="21dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="-10dp"
+                        android:src="@drawable/ucenter_orange_ball"/>
+
+
+                    <ImageView
+                        android:id="@+id/ucenter_right_ball"
+                        android:layout_width="21dp"
+                        android:layout_height="21dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="-10dp"
+                        android:src="@drawable/ucenter_black_ball"/>
+
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/ucenter_orange_lock_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:textColor="#999999"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/ucenter_black_lock_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginRight="16dp"
+                    android:textColor="#999999"
+                    android:textSize="12sp"/>
+
+                <ImageView
+                    android:id="@+id/ucenter_scroll_point"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="4dp"
+                    android:src="@drawable/ucenter_progress_point"
+                    android:visibility="invisible"
+                    />
+
+                <com.moreclub.common.ui.view.BubbleTextView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/ucenter_mileage_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/ucenter_scroll_point"
+                    android:paddingBottom="4dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="4dp"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:visibility="invisible"
+                    app:angle="8dp"
+                    app:arrowCenter="true"
+                    app:arrowHeight="5dp"
+                    app:arrowLocation="bottom"
+                    app:arrowWidth="8dp"
+                    app:bubbleColor="@color/orange"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/ucenter_fan_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ucenter_username"
+                    android:layout_marginTop="12dp"
+                    android:clickable="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/ucenter_follow_count"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:gravity="right"
+                        android:paddingRight="@dimen/ucenter_follow_lpadding"
+                        android:text="sdfasf"
+                        android:textColor="@color/white"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="|"
+                        android:textColor="@color/white"/>
+
+                    <TextView
+                        android:id="@+id/ucenter_follower_count"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="left"
+                        android:paddingLeft="@dimen/ucenter_follow_lpadding"
+                        android:text="asda"
+                        android:textColor="@color/white"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ucenter_center_layout_height"
+                android:paddingTop="@dimen/ucenter_center_layout_tpadding">
+
+                <LinearLayout
+                    android:id="@+id/ucenter_order_btn_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawableTop="@drawable/ucenter_bill"
+                        android:gravity="center_horizontal"
+                        android:text="@string/ucenter_bill"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ucenter_collect_btn_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@drawable/ucenter_collect"
+                        android:gravity="center_horizontal"
+                        android:text="@string/ucenter_collect"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ucenter_privilege"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawableTop="@drawable/ucenter_vip"
+                        android:gravity="center_horizontal"
+                        android:text="@string/ucenter_vio"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawableTop="@drawable/ucenter_chat_room"
+                        android:gravity="center_horizontal"
+                        android:text="@string/ucenter_chat_room"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/main_bartag_divider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ucenter_center_dvider_height"
+                android:layout_alignParentTop="true"
+                android:background="@color/mainItemDvider"
+                android:orientation="horizontal"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                >
+
+                <LinearLayout
+                    android:id="@+id/couponLay"
+                    android:layout_width="match_parent"
+                    android:layout_height="49dp"
+                    android:gravity="center_vertical"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        >
+
+                        <ImageView
+                            android:id="@+id/user_center_coupon_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/payment_coupon"
+                            />
+
+                        <TextView
+                            android:id="@+id/user_center_coupon_red"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_alignRight="@+id/user_center_coupon_icon"
+                            android:layout_alignTop="@+id/user_center_coupon_icon"
+                            android:layout_marginRight="-5dp"
+                            android:layout_marginTop="-10dp"
+                            android:background="@drawable/red_pointer"
+                            android:visibility="gone"
+                            />
+
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:id="@+id/coupon_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_weight="1"
+                        android:text="我的礼券"
+                        android:textColor="@color/mainItemBarDesc"
+                        android:textSize="14sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/coupon_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:drawableRight="@drawable/arrow_next"
+                        android:gravity="center_vertical"
+                        android:text="0张  "
+                        android:textColor="@color/merchant_item_distance"
+                        android:textSize="14sp"
+                        />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/mainItemDvider"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/share_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="49dp"
+                    android:gravity="center_vertical"
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/share_grzy"
+                        />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_weight="1"
+                        android:text="分享More给朋友，每天赚20里程"
+                        android:textColor="@color/mainItemBarDesc"
+                        android:textSize="14sp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:drawableRight="@drawable/arrow_next"
+                        android:gravity="center_vertical"
+                        android:text=""
+                        android:textColor="@color/merchant_item_distance"
+                        android:textSize="14sp"
+                        />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/mainItemDvider"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/check_layout"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/consuming"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_weight="1"
+                    android:text="套餐核销"
+                    android:textColor="@color/mainItemBarDesc"
+                    android:textSize="14sp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:drawableRight="@drawable/arrow_next"
+                    android:gravity="center_vertical"
+                    android:text=""
+                    android:textColor="@color/merchant_item_distance"
+                    android:textSize="14sp"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/check_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/mainItemDvider"
+                />
+
+            <LinearLayout
+                android:id="@+id/ucenter_playmore_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ucenter_play_more_height"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/ucenter_playmore"
+                    android:layout_width="@dimen/ucenter_play_more_height"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ucenter_play_more"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </com.moreclub.common.ui.view.scrollview.ObservableScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:background="@color/abc_black"/>
+
+        <include
+            android:id="@+id/ucenter_toolbar"
+            layout="@layout/details_navi_bar"/>
+    </LinearLayout>
+
+
+</FrameLayout>

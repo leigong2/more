@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+    >
+
+    <include
+        android:id="@+id/nav_layout"
+        layout="@layout/details_navi_bar"/>
+
+
+    <!--    <LinearLayout
+            android:id="@+id/ll_header_lay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/header_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="104dp"
+                android:text="头像"
+                android:textColor="@color/mainItemBarDesc"
+                android:textSize="14sp"/>
+
+            <ImageView
+                android:src="@drawable/profilephoto"
+                android:id="@+id/header_img"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="72dp"/>
+        </LinearLayout>-->
+
+    <ImageView
+        android:id="@+id/header_img"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/nav_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/profilephoto"/>
+
+    <TextView
+        android:id="@+id/header_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header_img"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="上传头像"
+        android:textColor="@color/mainItemPkgTitle"/>
+
+    <TextView
+        android:id="@+id/header_tag2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header_tag"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="6dp"
+        android:text="让更多的人认识你~"
+        android:textColor="@color/merchant_item_distance"
+        android:textSize="12sp"/>
+
+
+    <TextView
+        android:id="@+id/nickTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header_tag2"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="34dp"
+        android:text="昵称"
+        android:textColor="@color/mainItemBarDesc"
+        android:textSize="15sp"
+        />
+
+    <EditText
+        android:id="@+id/nickEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header_tag2"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="34dp"
+        android:layout_toRightOf="@+id/nickTag"
+        android:background="@android:color/transparent"
+        android:hint="给自己一个响亮的名称"
+        android:inputType="text"
+        android:maxLines="1"
+        android:textColor="@color/black"
+        android:textColorHint="@color/mainTagName"
+        android:textSize="14sp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignLeft="@+id/nickEditText"
+        android:layout_below="@+id/nickEditText"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/mainItemDvider"
+        />
+
+    <RelativeLayout
+        android:id="@+id/sex_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nickTag"
+        android:layout_marginTop="34dp">
+
+        <TextView
+            android:id="@+id/user_sex_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:text="性别"
+            android:textColor="@color/mainItemBarDesc"
+            android:textSize="14sp"/>
+
+        <ImageView
+            android:id="@+id/iv_man_select"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@+id/user_sex_tag"
+            android:src="@drawable/selector_reg"/>
+
+        <TextView
+            android:id="@+id/tv_man"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_man_select"
+            android:text="男"
+            android:textColor="@color/mainItemPkgTitle"
+            android:textSize="14sp"/>
+
+        <ImageView
+            android:id="@+id/iv_women_select"
+            android:layout_width="16dp"
+            android:layout_centerVertical="true"
+            android:layout_height="16dp"
+            android:layout_marginLeft="40dp"
+            android:layout_toRightOf="@+id/tv_man"
+            android:src="@drawable/selector_reg"/>
+
+        <TextView
+            android:id="@+id/tv_women"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_women_select"
+            android:text="女"
+            android:textColor="@color/mainItemPkgTitle"
+            android:textSize="14sp"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignLeft="@+id/nickEditText"
+        android:layout_below="@+id/sex_layout"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/mainItemDvider"
+        />
+
+    <Button
+        android:id="@+id/goHome"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/regButton"
+        android:text="去首页"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        />
+
+</RelativeLayout>

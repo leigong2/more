@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/abc_white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <include layout="@layout/details_navi_bar" android:id="@+id/nav_layout"/>
+
+    <TextView
+        android:id="@+id/tv_comfirm_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="问题"
+        android:layout_below="@+id/nav_layout"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        />
+
+    <TextView
+        android:text="你父亲的名字?"
+        android:id="@+id/tv_comfirm_question_name"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textColorHint="@color/black"
+        android:textSize="14sp"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@+id/tv_comfirm_question"
+        android:layout_alignTop="@+id/tv_comfirm_question"
+        android:layout_alignBottom="@+id/tv_comfirm_question"
+        android:background="@color/white"
+        android:textColor="@color/black"
+        android:maxLines="1"
+        />
+
+    <TextView
+        android:id="@+id/tv_comfirm_answer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="答案"
+        android:layout_below="@+id/tv_comfirm_question"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        />
+
+    <EditText
+        android:hint="请输入答案"
+        android:id="@+id/et_comfirm_answer_name"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textColorHint="@color/black"
+        android:textSize="14sp"
+        android:layout_toRightOf="@+id/tv_comfirm_answer"
+        android:layout_marginLeft="16dp"
+        android:layout_alignTop="@+id/tv_comfirm_answer"
+        android:layout_alignBottom="@+id/tv_comfirm_answer"
+        android:background="@color/white"
+        android:textColor="@color/black"
+        android:maxLines="1"
+        />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/divider4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/mainItemDvider"
+        android:layout_alignLeft="@+id/et_comfirm_answer_name"
+        android:layout_below="@+id/tv_comfirm_answer"
+        android:layout_marginRight="16dp"
+        />
+
+    <TextView
+        android:id="@+id/forgetCodeError2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/reconfirmPasswordLineCode"
+        android:layout_below="@+id/divider4"
+        android:textColor="@color/regLineText"
+        android:layout_marginTop="5dp"
+        android:text="答案不正确"
+        android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/comfirmPasswordButton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="14sp"
+        android:text="下一步"
+        android:layout_alignParentBottom="true"
+        android:background="@color/regButton"
+        android:textColor="@color/black"
+        />
+
+</RelativeLayout>

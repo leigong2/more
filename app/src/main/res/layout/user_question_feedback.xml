@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/nav_layout"
+        layout="@layout/details_navi_bar" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <EditText
+            android:id="@+id/feedback_et"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="请在这里输入你的问题和意见，我们会在5个工作日内答复你..."
+            android:layout_marginRight="16dp"
+            android:gravity="top"
+            android:textColor="@color/feedbackText"
+            android:textColorHint="@color/feedbackHint"
+            android:textSize="14sp"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:background="@android:color/transparent"
+            android:lineSpacingExtra="5dp"
+            android:imeOptions="actionDone"
+            android:inputType="textMultiLine"
+            />
+
+        <TextView
+            android:id="@+id/feenack_inputNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:text="0/500"
+            android:layout_marginBottom="40dp"
+            android:layout_marginRight="16dp"
+            android:textColor="@color/merchant_item_distance"
+            />
+    </RelativeLayout>
+
+
+
+    <Button
+        android:id="@+id/feedbackButton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/inputQuestion"
+        android:background="@color/regButton"
+        android:text="提交问题反馈"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+</LinearLayout>

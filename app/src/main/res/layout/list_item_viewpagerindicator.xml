@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp" >
+
+    <ImageView
+        android:id="@+id/ima_indicator"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civ_red_point"
+        android:visibility="gone"
+        android:background="@drawable/red_pointer"
+        android:layout_alignRight="@+id/ima_indicator"
+        android:layout_alignTop="@+id/ima_indicator"
+        android:layout_width="8dp"
+        android:layout_marginRight="-4dp"
+        android:layout_height="8dp"/>
+
+    <TextView
+        android:id="@+id/tv_title_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ima_indicator"
+        android:layout_centerHorizontal="true"
+        android:textSize="12sp"
+        android:gravity="center"
+        android:textColor="@drawable/page_tab_text_selector"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</RelativeLayout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:background="@color/black"
+                android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_marginTop="156dp"
+        android:id="@+id/splash_bg"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/splash_logo_loading"
+        />
+
+    <TextView
+        android:id="@+id/splash_title"
+        android:layout_below="@id/splash_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="50dp"
+        android:layout_centerHorizontal="true"
+        android:text="点亮你的第三空间"
+        />
+
+    <TextView
+        android:id="@+id/splash_company_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:layout_centerHorizontal="true"
+        android:text="摩儿出品"
+        />
+
+    <com.youth.banner.Banner
+        app:indicator_margin="8dp"
+        app:indicator_height="8dp"
+        app:indicator_width="8dp"
+        app:indicator_drawable_selected="@drawable/indicater_selected_circle"
+        app:indicator_drawable_unselected="@drawable/indicater_normal_circle"
+        android:id="@+id/splash_banner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_welcome"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v4.view.ViewPager>
+
+
+    <LinearLayout
+        android:id="@+id/ll_indicators"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="48dp"
+        android:orientation="horizontal"/>
+
+    <View
+        android:visibility="gone"
+        android:id="@+id/welcome_indicator"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_alignLeft="@+id/ll_indicators"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="56dp"
+        android:layout_marginLeft="8dp"
+        android:background="@drawable/indicater_selected_circle" />
+
+
+    <TextView
+        android:visibility="visible"
+        android:padding="8dp"
+        android:background="@drawable/splash_btn"
+        android:id="@+id/splash_start"
+        android:layout_width="160dp"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textColor="@color/abc_black"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        android:layout_centerHorizontal="true"
+        android:text="立即开启"/>
+</RelativeLayout>

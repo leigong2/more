@@ -1,0 +1,804 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+
+    <com.moreclub.common.ui.view.scrollview.ObservableScrollView
+        android:id="@+id/detailsScrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white"
+        android:fadingEdge="none"
+        android:fadingEdgeLength="0dp"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.youth.banner.Banner
+                android:id="@+id/image_banner"
+                android:layout_width="match_parent"
+                android:layout_height="219dp"/>
+
+            <TextView
+                android:id="@+id/merchantName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="14dp"
+                android:textColor="@color/mainItemBarDesc"
+                android:textSize="20sp"/>
+
+
+            <TextView
+                android:id="@+id/merchantSellPointer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="14dp"
+                android:lineSpacingExtra="2dp"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/merchantPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="12dp"
+                android:text=""
+                android:textColor="@color/merchant_price"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/mainItemDvider"/>
+
+
+            <LinearLayout
+                android:id="@+id/merchantAddressLay"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/merchantAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="16dp"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textColor="@color/merchant_address"
+                    android:textSize="14sp"/>
+
+
+                <Button
+                    android:id="@+id/navButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="3"
+                    android:background="@android:color/transparent"
+                    android:text="导航"
+                    android:textColor="@color/merchant_price"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="1dp"
+                    android:text="|"
+                    android:textColor="@color/merchant_price"/>
+
+                <Button
+                    android:id="@+id/callPhoneButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="3"
+                    android:background="@android:color/transparent"
+                    android:text="电话"
+                    android:textColor="@color/merchant_price"
+                    android:textSize="14sp"/>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/mainItemDvider"/>
+
+            <LinearLayout
+                android:id="@+id/card_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:id="@+id/support_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="本店支持"
+                    android:textColor="@color/merchant_address"
+                    android:textSize="14sp"
+                    />
+
+                <ImageView
+                    android:id="@+id/orange_card"
+                    android:layout_width="50dp"
+                    android:layout_height="28dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/merchant_orange"
+                    android:visibility="gone"
+                    />
+
+                <ImageView
+                    android:id="@+id/orange_arraw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/package_arraw"
+                    android:visibility="gone"
+                    />
+
+                <ImageView
+                    android:id="@+id/black_card"
+                    android:layout_width="50dp"
+                    android:layout_height="28dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="26dp"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/merchant_black"
+                    android:visibility="gone"
+                    />
+
+                <ImageView
+                    android:id="@+id/black_arraw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/package_arraw"
+                    android:visibility="gone"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/card_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:text="(点击卡片，查看特权范围)"
+                android:textColor="@color/searchClearTagText"
+                android:textSize="12sp"
+                />
+
+            <View
+                android:id="@+id/view_devide"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/mainItemDvider"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:id="@+id/coupon_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    >
+
+                    <ImageView
+                        android:id="@+id/coupon_tag_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:src="@drawable/storelist_coupon"
+                        />
+
+                    <TextView
+                        android:id="@+id/coupon_des"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text=""
+                        android:textColor="@color/merchant_address"
+                        android:textSize="14sp"
+                        />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:src="@drawable/package_arraw"
+                        />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/coupon_bottom_devide"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="@color/mainItemDvider"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_activities"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="6dp"
+                    android:background="@drawable/storedetial_activity"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="活动"
+                    android:textColor="@color/orange"
+                    android:textSize="12dp"/>
+
+                <TextView
+                    android:id="@+id/activity_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="暂无活动"
+                    android:textColor="@color/merchant_address"
+                    android:textSize="14sp"/>
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/main_triangle_grey"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/card_devide"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/mainItemDvider"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:id="@+id/sign_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/tv_weight"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="@color/mainItemDvider"/>
+
+                <LinearLayout
+                    android:id="@+id/sign_tag_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center_vertical"
+                    >
+
+                    <TextView
+                        android:id="@+id/mspaceCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:text="M-sapce (0)"
+                        android:textColor="@color/mainItemBarDesc"
+                        android:textSize="14sp"/>
+
+                    <ImageView
+                        android:id="@+id/sign_arraw"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/package_arraw"
+                        android:visibility="visible"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sign_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="85dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:orientation="horizontal"
+                    >
+
+                    <Button
+                        android:id="@+id/signButton"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/merchant_sign_btn"
+                        android:gravity="center"
+                        android:text="签到"
+                        android:textSize="14sp"
+                        />
+
+                    <ImageView
+                        android:id="@+id/no_sign_tip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="25dp"
+                        android:src="@drawable/signin_tip"
+                        android:visibility="visible"
+                        />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/signRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginTop="15dp"
+                        android:fadingEdge="none"
+                        android:scrollbars="none"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/sign_devide"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/mainItemDvider"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/wineLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="藏酒/主打"
+                    android:textColor="@color/mainItemBarDesc"
+                    android:textSize="14sp"/>
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/wineRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:fadingEdge="none"
+                    android:scrollbars="none">
+
+                </android.support.v7.widget.RecyclerView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/mainItemDvider"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/musicLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="音乐调性"
+                    android:textColor="@color/mainItemBarDesc"
+                    android:textSize="14sp"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/musicRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:fadingEdge="none"
+                    android:scrollbars="none">
+
+                </android.support.v7.widget.RecyclerView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/mainItemDvider"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/environmentLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="环境风景"
+                    android:textColor="@color/mainItemBarDesc"
+                    android:textSize="14sp"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/environmentRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:fadingEdge="none"
+                    android:scrollbars="none">
+
+                </android.support.v7.widget.RecyclerView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/mainItemDvider"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/facilitiesLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="设施服务"
+                    android:textColor="@color/mainItemBarDesc"
+                    android:textSize="14sp"/>
+
+                <com.moreclub.moreapp.main.ui.view.CustomGridView
+                    android:id="@+id/facilitiesGridView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginTop="16dp"
+                    android:fadingEdge="none"
+                    android:numColumns="4"
+                    android:scrollbars="none"
+                    android:verticalSpacing="10dp">
+
+                </com.moreclub.moreapp.main.ui.view.CustomGridView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/mainItemDvider"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/peopleLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="16dp"
+                android:paddingTop="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="容纳人数"
+                    android:textColor="@color/merchant_item_distance"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/peopleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="80人"
+                    android:textColor="@color/merchant_address"
+                    android:textSize="12sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/areaLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="16dp"
+                android:paddingTop="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="场地面积"
+                    android:textColor="@color/merchant_item_distance"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/areaText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="150m2"
+                    android:textColor="@color/merchant_address"
+                    android:textSize="12sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/roomLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="16dp"
+                android:paddingTop="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="包房数量"
+                    android:textColor="@color/merchant_item_distance"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/roomText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="4间"
+                    android:textColor="@color/merchant_address"
+                    android:textSize="12sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/timeLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="16dp"
+                android:paddingTop="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="营业时间"
+                    android:textColor="@color/merchant_item_distance"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/timeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="12:00"
+                    android:textColor="@color/merchant_address"
+                    android:textSize="12sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/payMethodLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="16dp"
+                android:paddingLeft="16dp"
+                android:paddingTop="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="支付方式"
+                    android:textColor="@color/merchant_item_distance"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/payText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="微信 支付宝"
+                    android:textColor="@color/merchant_address"
+                    android:textSize="12sp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/mainItemDvider"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:text="酒吧故事"
+                android:textColor="@color/mainItemBarDesc"
+                android:textSize="14sp"/>
+
+            <WebView
+                android:id="@+id/merchantWebview"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="16dp"
+                />
+        </LinearLayout>
+    </com.moreclub.common.ui.view.scrollview.ObservableScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/black"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            >
+
+            <ImageButton
+                android:id="@+id/collect_button"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:scaleType="center"
+                android:src="@drawable/collect_fav"
+                />
+
+            <ImageButton
+                android:id="@+id/share_button"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="24dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:scaleType="center"
+                android:src="@drawable/top_share"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@color/mainMoreBar"
+            android:gravity="center_vertical"
+            >
+
+            <TextView
+                android:id="@+id/book_btton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="订位"
+                android:textColor="@color/mainItemBarDesc"
+                android:textSize="14sp"
+                />
+
+            <TextView
+                android:layout_width="1dp"
+                android:layout_height="20dp"
+                android:background="@color/black"
+                />
+
+            <TextView
+                android:id="@+id/sell_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="买单"
+                android:textColor="@color/mainItemBarDesc"
+                android:textSize="14sp"
+                />
+
+            <TextView
+                android:layout_width="1dp"
+                android:layout_height="20dp"
+                android:background="@color/black"
+                />
+
+            <TextView
+                android:id="@+id/package_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="套餐"
+                android:textColor="@color/mainItemBarDesc"
+                android:textSize="14sp"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/nav_layout"
+        layout="@layout/details_navi_bar"/>
+
+    <View
+        android:id="@+id/gray_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/nav_layout"
+        android:background="#66000000"
+        android:visibility="gone"/>
+</FrameLayout>

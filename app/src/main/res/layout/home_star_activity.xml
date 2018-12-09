@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home_star_bg">
+
+    <com.moreclub.moreapp.main.ui.view.ParticleView
+        android:id="@+id/particle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.moreclub.common.ui.view.scrollview.ObservableScrollView
+        android:id="@+id/home_star_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadingEdge="none"
+        android:scrollbars="none">
+
+        <FrameLayout
+            android:id="@+id/fl_root"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/home_start_parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+
+        </FrameLayout>
+    </com.moreclub.common.ui.view.scrollview.ObservableScrollView>
+
+    <ImageView
+        android:id="@+id/bar_bg"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/head_bg"
+        android:fitsSystemWindows="true"/>
+
+    <ImageView
+        android:id="@+id/iv_btn_bg"
+        android:layout_width="match_parent"
+        android:layout_height="148dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/home_bottom_repeat_bg"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:scaleType="fitXY"
+        android:background="@drawable/top_bar"
+        android:layout_marginTop="-16dp"
+        android:layout_height="120dp"/>
+
+    <RelativeLayout
+        android:id="@+id/main_toolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp">
+
+        <TextView
+            android:id="@+id/home_star_city_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:text="成都"
+            android:textColor="@color/white"
+            android:textSize="18sp"/>
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/iv_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/home_star_city_name"
+            android:layout_alignTop="@+id/home_star_city_name"
+            android:layout_marginLeft="4dp"
+            android:layout_toRightOf="@+id/home_star_city_name"
+            android:src="@drawable/arrow_down"/>
+
+        <TextView
+            android:id="@+id/home_star_divider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@id/home_star_city_name"
+            android:paddingBottom="2dp"
+            android:text="|"
+            android:textColor="@color/white"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/tv_all_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/home_star_divider"
+            android:text="全城酒吧"
+            android:textColor="@color/white"
+            android:textSize="18sp"/>
+
+
+        <ImageView
+            android:id="@+id/iv_all_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6dp"
+            android:layout_toRightOf="@+id/tv_all_city"
+            android:src="@drawable/arrow_white"/>
+
+        <FrameLayout
+            android:layout_alignParentRight="true"
+            android:layout_width="64dp"
+            android:background="@drawable/rect_home_star"
+            android:layout_height="32dp">
+
+            <ImageView
+                android:id="@+id/home_btn_search"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/home_star_search"/>
+        </FrameLayout>
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/toolbar_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/toolbar_bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-65dp"
+        android:scaleType="fitXY"/>
+
+    <Button
+        android:id="@+id/home_star_entry_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/home_star_entry_btn"/>
+
+    <ImageView
+        android:id="@+id/home_activities"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="25dp"
+        android:layout_marginLeft="35dp"
+        android:gravity="center_horizontal"
+        android:src="@drawable/home_star_activity_click"/>
+
+
+    <ImageView
+        android:id="@+id/home_sales"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="25dp"
+        android:layout_marginRight="35dp"
+        android:gravity="center_horizontal"
+        android:src="@drawable/home_star_sale_click"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:alpha="0"
+        android:orientation="vertical">
+
+        <com.moreclub.moreapp.main.ui.view.LoadView
+            android:id="@+id/load_bar1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            app:color="#FFCC00"
+            app:radius="10dp"/>
+
+        <com.moreclub.moreapp.main.ui.view.LoadView
+            android:id="@+id/load_bar2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            app:color="#FFCC00"
+            app:radius="10dp"/>
+
+        <com.moreclub.moreapp.main.ui.view.LoadView
+            android:id="@+id/load_bar3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            app:color="#FFCC00"
+            app:radius="10dp"/>
+
+        <com.moreclub.moreapp.main.ui.view.LoadView
+            android:id="@+id/load_bar4"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            app:color="#FFCC00"
+            app:radius="10dp"/>
+
+        <TextView
+            android:id="@+id/tv_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/load_bar1"
+            android:gravity="center"
+            android:text="下拉刷新"
+            android:textColor="@color/abc_white"/>
+    </RelativeLayout>
+
+    <com.moreclub.moreapp.main.ui.view.WaveLayout
+        android:id="@+id/wave_layout"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        app:wave_layout_color="@color/orange"
+        app:wave_layout_radius="20dp"/>
+
+    <ImageView
+        android:id="@+id/iv_errer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/home_star_errer"
+        android:visibility="gone"/>
+
+</RelativeLayout>

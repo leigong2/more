@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/pay_success_header_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:background="@color/paysucess_header_bg"
+        android:paddingTop="16dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/paysuccess" />
+
+            <TextView
+                android:id="@+id/pay_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="买单成功"
+                android:textColor="@color/white"
+                android:layout_marginLeft="10dp"
+                android:textSize="20sp"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/privilege_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:text=""
+            android:maxLines="1"
+            android:drawableRight="@drawable/payment_success_triangle"
+            />
+
+        <TextView
+            android:id="@+id/look_order_button"
+            android:layout_width="150dp"
+            android:layout_height="44dp"
+            android:background="@drawable/pay_success_btn"
+            android:textColor="@color/black"
+            android:text="@string/look_order"
+            android:layout_marginTop="16dp"
+            android:alpha="0.5"
+            android:textSize="14sp"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/mainItemDvider"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        >
+
+        <TextView
+            android:id="@+id/merchant_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:textSize="20sp"
+            android:text=""
+            android:textColor="@color/mainItemPkgTitle"
+            android:drawableRight="@drawable/triangle_paysuccess"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/mainItemDvider"
+        />
+
+</LinearLayout>

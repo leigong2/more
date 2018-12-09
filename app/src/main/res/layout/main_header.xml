@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/head_bg"
+        android:layout_width="match_parent"
+        android:layout_height="295dp"
+        android:background="@drawable/home_star_bg"
+        android:scaleType="centerCrop"/>
+
+    <FrameLayout
+        android:id="@+id/banner_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <com.youth.banner.Banner
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/image_banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            app:image_scale_type="center_crop"/>
+
+        <com.moreclub.moreapp.main.ui.view.CycleGalleryViewPager
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/banner_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+    </FrameLayout>
+
+    <com.moreclub.moreapp.main.ui.view.CircleIndicator
+        android:id="@+id/circle_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_alignBottom="@+id/banner_layout"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible"
+        app:ci_height="8dp"
+        app:ci_width="8dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/mchannel_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/banner_layout"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="40dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/main_channel"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:text="M-Channel"
+            android:layout_marginTop="5dp"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/mspace_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/banner_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/main_space"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:text="Space"
+            android:layout_marginTop="5dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mliveparty_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/banner_layout"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/main_liveparty"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:text="@string/partTitle"
+            android:layout_marginTop="5dp"
+            />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/arraw"
+        android:layout_width="20dp"
+        android:layout_height="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignBottom="@+id/head_bg"
+        android:src="@drawable/uparraw"
+        />
+
+    <LinearLayout
+        android:id="@+id/chat_people_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_below="@+id/head_bg"
+        android:gravity="center_horizontal"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textSize="14sp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/black"
+            android:text="朋友们都集聚在此"
+            />
+
+        <com.moreclub.moreapp.main.ui.view.VerticalViewPager
+            android:id="@+id/chat_people"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_below="@+id/channel_line"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/mainItemDvider"
+            />
+    </LinearLayout>
+
+
+
+</RelativeLayout>

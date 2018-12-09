@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/no_edit_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:background="#66000000"
+        ></LinearLayout>
+
+    <EditText
+        android:visibility="visible"
+        android:inputType="text"
+        android:imeOptions="actionSend"
+        android:id="@+id/et_write_comment"
+        android:layout_gravity="bottom|center_horizontal"
+        android:hint="留个言评论下吧……"
+        android:background="@color/pkgorder_detail_bg"
+        android:padding="8dp"
+        android:textColorHint="@color/merchant_item_distance"
+        android:gravity="center_vertical"
+        android:textSize="14sp"
+        android:textColor="@color/mainItemTagTitle"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="50dp"/>
+
+</RelativeLayout>

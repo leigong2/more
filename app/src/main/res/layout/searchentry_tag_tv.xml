@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/searchentry_tag_margin"
+    android:background="@drawable/searchentry_tag_bg"
+    android:ellipsize="end"
+    android:lines="1"
+    android:paddingBottom="@dimen/searchentry_tag_item_hpadding"
+    android:paddingLeft="@dimen/searchentry_tag_item_padding"
+    android:paddingRight="@dimen/searchentry_tag_item_padding"
+    android:paddingTop="@dimen/searchentry_tag_item_hpadding"
+    android:textColor="@color/searchEntryTagText"
+    android:textSize="@dimen/searchentry_tag_size">
+
+</TextView>

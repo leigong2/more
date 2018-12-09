@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="50dp">
+
+    <TextView
+        android:layout_alignParentLeft="true"
+        android:id="@+id/apply_refund_reason"
+        android:layout_width="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="16dp"
+        android:textColor="@color/commonTextColor"
+        android:textSize="@dimen/common_text_size"
+        android:layout_height="wrap_content" />
+
+    <CheckBox
+        android:id="@+id/refund_item_cb"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="16dp"
+        android:visibility="gone"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@drawable/choose"
+        />
+    <View
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/mainItemDvider" />
+</RelativeLayout>

@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:id="@+id/ll_root"
+              android:layout_height="wrap_content"
+              android:background="@color/black"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:layout_marginTop="-20dp">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/mypage_background_upper"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/header_img"
+            android:layout_width="122dp"
+            android:layout_height="122dp"
+            android:layout_centerInParent="true"
+            android:focusable="false"
+            android:scaleType="centerCrop"/>
+
+
+        <ImageView
+            android:id="@+id/inner_img"
+            android:layout_width="164dp"
+            android:layout_height="164dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/user_details_circle_inner"/>
+
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/civ_star"
+            android:layout_width="51dp"
+            android:layout_height="51dp"
+            android:background="@drawable/user_detail_star_circle"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="天蝎座"
+            android:textColor="@color/star"
+            android:textSize="14sp"
+            android:translationX="81dp"/>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/civ_city"
+            android:layout_width="51dp"
+            android:layout_height="51dp"
+            android:background="@drawable/user_detail_city_circle"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="成都"
+            android:textColor="#2ccb5c"
+            android:textSize="14sp"
+            android:translationY="-81dp"/>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/civ_night"
+            android:layout_width="61dp"
+            android:layout_height="61dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/user_detail_night_circle"
+            android:gravity="center"
+            android:text="夜猫"
+            android:textColor="@color/text_color_merchant"
+            android:textSize="14sp"
+            android:translationX="85dp"
+            android:translationY="-85dp"/>
+
+        <TextView
+            android:visibility="gone"
+            android:padding="3dp"
+            android:id="@+id/civ_life"
+            android:background="@drawable/user_detail_life_circle"
+            android:layout_width="61dp"
+            android:layout_height="61dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="青春无敌无敌"
+            android:textColor="@color/life"
+            android:textSize="14sp"
+            android:translationX="-85dp"
+            android:translationY="-85dp"/>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/civ_self"
+            android:layout_width="51dp"
+            android:layout_height="51dp"
+            android:background="@drawable/user_detail_self_circle"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="自嗨"
+            android:textColor="@color/self"
+            android:textSize="14sp"
+            android:translationX="-81dp"/>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/civ_drink"
+            android:background="@drawable/user_detail_drink_circle"
+            android:layout_width="61dp"
+            android:layout_height="61dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="XO 白兰地"
+            android:textColor="#2ccb5c"
+            android:textSize="14sp"
+            android:translationY="121dp"/>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/user_details_circle_outter">
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/header_click_layout"
+            android:layout_width="122dp"
+            android:layout_height="122dp"
+            android:layout_centerInParent="true"
+            android:focusable="false"
+            android:scaleType="centerCrop"
+            android:orientation="vertical"
+            />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/header_img"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:textSize="16sp"/>
+
+        <ImageView
+            android:id="@+id/user_sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/header_img"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@+id/user_name"
+            android:src="@drawable/femenine"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/specific_mask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:textAlignment="center"
+        android:textColor="@color/merchant_item_distance"
+        android:textSize="14sp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/center_devide"
+            android:layout_width="1dp"
+            android:layout_height="25dp"
+            android:layout_centerHorizontal="true"
+            android:background="@color/merchant_item_distance"/>
+
+        <TextView
+            android:id="@+id/attention_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:layout_toLeftOf="@+id/center_devide"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/attention_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:layout_toLeftOf="@+id/attention_count"
+            android:text="关注"
+            android:textColor="@color/merchant_item_distance"
+            android:textSize="16sp"/>
+
+
+        <TextView
+            android:id="@+id/follower_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/center_devide"
+            android:text="粉丝"
+            android:textColor="@color/merchant_item_distance"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/follower_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/follower_tag"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="12sp"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/option_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="20dp">
+
+        <View
+            android:id="@+id/weight1"
+            android:visibility="visible"
+            android:layout_width="0dp"
+            android:layout_height="0sp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/attention_btn"
+            android:layout_width="110dp"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="16dp"
+            android:background="@drawable/follow_select"
+            android:gravity="center"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="关注 TA"
+            android:textColor="@color/regButton"
+            android:textSize="16sp"/>
+
+        <View
+            android:visibility="visible"
+            android:id="@+id/weight2"
+            android:layout_width="0dp"
+            android:layout_height="0sp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:visibility="visible"
+            android:id="@+id/message_btn"
+            android:layout_width="110dp"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/follow_normal"
+            android:gravity="center"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="发消息"
+            android:textColor="@color/merchant_item_distance"
+            android:textSize="16sp"/>
+
+        <View
+            android:id="@+id/weight"
+            android:visibility="visible"
+            android:layout_width="0dp"
+            android:layout_height="0sp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <View
+        android:visibility="gone"
+        android:id="@+id/reply_weight"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="0dp"/>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/reply_lay"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/reply_iv"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/btn_bottom"/>
+        <View
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"/>
+        <TextView
+            android:id="@+id/reply_tv"
+            android:text="邀请TA"
+            android:layout_marginRight="16dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/abc_white"
+            android:textSize="21sp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/modify_user_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        >
+        <TextView
+            android:id="@+id/modify_user_info"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
+            android:background="@drawable/follow_normal"
+            android:gravity="center"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:layout_centerHorizontal="true"
+            android:text="修改个人资料"
+            android:textColor="@color/merchant_item_distance"
+            android:textSize="16sp"/>
+    </RelativeLayout>
+
+    <TextView
+        android:visibility="visible"
+        android:id="@+id/tv_goto_party"
+        android:layout_width="wrap_content"
+        android:layout_height="43dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:drawableBottom="@drawable/downward"
+        android:drawablePadding="8dp"
+        android:text="更多"
+        android:textColor="@color/merchant_item_distance"
+        android:textSize="14sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:layout_marginTop="16dp"
+        android:visibility="visible"
+        >
+
+        <RelativeLayout
+            android:id="@+id/activity_channel_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            >
+
+            <TextView
+                android:id="@+id/channel_tab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="动态"
+                android:layout_centerInParent="true"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:id="@+id/channel_line"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/black"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="2dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                />
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/activity_party_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            >
+
+            <TextView
+                android:id="@+id/party_tab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="现场派对"
+                android:layout_centerInParent="true"
+                android:textSize="14sp"
+                android:textColor="@color/merchant_item_distance"
+                />
+
+            <TextView
+                android:id="@+id/party_line"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/black"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="2dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:visibility="gone"
+                />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

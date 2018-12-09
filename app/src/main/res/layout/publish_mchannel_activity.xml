@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/navL"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_toolbar_height"
+        android:background="@color/black"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/nav_back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/white"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/activity_title"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="24dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="发动态"
+            android:textColor="@color/white"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/publishBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/publish_channel_noused"
+            android:gravity="center_vertical"
+            android:paddingBottom="3dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="3dp"
+            android:text="发布"
+            android:textColor="@color/black"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+    <com.moreclub.common.ui.view.scrollview.ObservableScrollView
+        android:id="@+id/detailsScrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/navL"
+        android:background="@color/white"
+        android:fadingEdge="none"
+        android:fadingEdgeLength="0dp"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:id="@+id/publishdeslay"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                >
+
+                <EditText
+                    android:id="@+id/publishdes"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@null"
+                    android:gravity="top"
+                    android:hint="分享此刻的精彩..."
+                    android:maxHeight="120dp"
+                    android:minHeight="30dp"
+                    android:maxLength="2000"
+                    android:paddingTop="16dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/merchant_item_distance"
+                    android:textSize="14sp"/>
+
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_photos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="10dp"/>
+
+            <RelativeLayout
+                android:id="@+id/address_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="24dp">
+
+                <ImageView
+                    android:id="@+id/address_img"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginTop="2dp"
+                    android:src="@drawable/dark_location"/>
+
+                <TextView
+                    android:id="@+id/address_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/address_img"
+                    android:text="所在位置"
+                    android:textColor="@color/user_detail_photo"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/select_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/address_tag"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_toRightOf="@+id/address_tag"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/address_tag"
+                    android:layout_below="@+id/address_tag"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/caicai"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="猜你在:"
+                        android:textColor="@color/user_detail_photo"
+                        android:textSize="12sp"/>
+
+                    <TextView
+                        android:id="@+id/address_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text=""
+                        android:textColor="@color/star_location_change"
+                        android:textSize="12sp"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/dark_shape"/>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/devide1"
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:layout_marginTop="24dp"
+                android:background="@color/mainItemDvider"/>
+
+
+            <RelativeLayout
+                android:id="@+id/topic_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="24dp"
+                android:paddingBottom="30dp"
+
+                >
+
+                <ImageView
+                    android:id="@+id/topic_img"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginTop="2dp"
+                    android:src="@drawable/dark_publish_topic"/>
+
+                <TextView
+                    android:id="@+id/topic_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/topic_img"
+                    android:text="添加话题"
+                    android:textColor="@color/user_detail_photo"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/select_topic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_toRightOf="@+id/topic_tag"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/topic_tag"
+                    android:layout_below="@+id/topic_tag"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/liuxing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="最流行:"
+                        android:textColor="@color/user_detail_photo"
+                        android:textSize="12sp"/>
+
+                    <TextView
+                        android:id="@+id/topic_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text=""
+                        android:textColor="@color/star_location_change"
+                        android:textSize="12sp"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/dark_shape"/>
+
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </com.moreclub.common.ui.view.scrollview.ObservableScrollView>
+
+    <FrameLayout
+        android:id="@+id/reviewPicLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:gravity="center_vertical"
+        android:visibility="gone">
+
+        <com.hyphenate.easeui.widget.photoview.EasePhotoView
+            android:id="@+id/reviewPic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"/>
+
+    </FrameLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#33000000"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/pb_upload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminateDrawable="@drawable/progressbar"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pb_upload"
+            android:layout_centerHorizontal="true"
+            android:text="图片上传中..."/>
+
+    </RelativeLayout>
+</RelativeLayout>

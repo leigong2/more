@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:id="@+id/addressAutoLay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/mainItemDvider"
+        >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/user_address"
+                />
+
+            <TextView
+                android:id="@+id/autoAddressText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="正在定位中..."
+                android:layout_marginLeft="16dp"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/mainItemTagTitle"
+                />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="16dp"
+        android:textColor="@color/merchant_item_distance"
+        android:text="全部"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@color/mainItemDvider"
+        android:layout_marginTop="8dp"
+        />
+
+</LinearLayout>

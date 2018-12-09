@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="coupon_card_bg_height">147dp</dimen>
+    <dimen name="coupon_card_bg_devide_left">105dp</dimen>
+    <dimen name="coupon_card_bg_left_layout_width">115dp</dimen>
+</resources>

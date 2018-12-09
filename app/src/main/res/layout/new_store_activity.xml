@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/nav_layout"
+        layout="@layout/details_navi_bar"/>
+
+    <com.moreclub.moreapp.information.ui.view.XRecyclerView
+        android:layout_below="@+id/nav_layout"
+        android:id="@+id/xrv_headline_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fadingEdge="none"
+        android:scrollbars="none">
+    </com.moreclub.moreapp.information.ui.view.XRecyclerView>
+
+</RelativeLayout>

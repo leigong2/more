@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:visibility="visible"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_bg_all_city"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:src="@drawable/cityentrance"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/go_all_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:drawablePadding="3dp"
+            android:drawableRight="@drawable/ucenter_triangle"
+            android:text="特惠SALE"
+            android:textColor="@color/orange"
+            android:textSize="15dp"/>
+
+        <TextView
+            android:visibility="visible"
+            android:id="@+id/merchant_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/go_all_city"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="x个商品正在促销"
+            android:textColor="@color/abc_white"
+            android:textSize="12dp"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

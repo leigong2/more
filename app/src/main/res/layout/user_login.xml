@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/abc_white">
+
+    <RelativeLayout
+        android:id="@+id/rl_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/abc_black"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            />
+
+        <ImageView
+            android:id="@+id/iv_login_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="80dp"
+            android:padding="5dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/login_logo"
+            />
+
+        <EditText
+            android:id="@+id/input_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="180dp"
+            android:hint="@string/login_account_hint_phone"
+            android:inputType="number"
+            android:textColor="@color/mainTagName"
+            android:textColorHint="@color/mainTagName"
+            android:textSize="14sp"
+            android:textCursorDrawable="@drawable/color_cursor"
+            />
+
+        <TextView
+            android:id="@+id/account_devide"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/input_account"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:background="@color/mainItemTagTitle"
+            />
+
+        <TextView
+            android:id="@+id/account_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/account_devide"
+            android:layout_below="@+id/account_devide"
+            android:layout_marginTop="5dp"
+            android:text="@string/login_phone_error"
+            android:textColor="@color/regButton"
+            android:textSize="14sp"
+            android:visibility="invisible"
+            />
+
+        <EditText
+            android:id="@+id/input_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/account_devide"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="48dp"
+            android:hint="@string/login_password_hint"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:textColor="@color/mainTagName"
+            android:textColorHint="@color/mainTagName"
+            android:textSize="14sp"
+            android:textCursorDrawable="@drawable/color_cursor"
+            />
+
+        <TextView
+            android:id="@+id/forget_password"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_alignBaseline="@+id/input_password"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="50dp"
+            android:gravity="right"
+            android:text="@string/login_forget"
+            android:textColor="@color/mainTagName"
+            android:textSize="14sp"
+            />
+
+        <TextView
+            android:id="@+id/password_devide"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/input_password"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:background="@color/mainItemTagTitle"
+            />
+
+        <TextView
+            android:id="@+id/password_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/password_devide"
+            android:layout_below="@+id/password_devide"
+            android:layout_marginTop="5dp"
+            android:text="@string/login_password_error"
+            android:textColor="@color/regButton"
+            android:textSize="14sp"
+            android:visibility="invisible"
+            />
+
+        <Button
+            android:id="@+id/login"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_below="@+id/password_devide"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/login_btn"
+            android:text="@string/login"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            />
+
+
+        <ImageButton
+            android:id="@+id/wx_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/login"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="80dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/wechat"
+            />
+
+        <ImageButton
+            android:id="@+id/wb_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/login"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="80dp"
+            android:layout_toRightOf="@+id/wx_login"
+            android:background="@android:color/transparent"
+            android:src="@drawable/weibo"
+            />
+
+
+        <Button
+            android:id="@+id/new_reg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/wb_login"
+            android:layout_marginRight="16dp"
+            android:background="@android:color/transparent"
+            android:text="@string/reg_new_user"
+            android:textColor="@color/abc_white"
+            android:textSize="14dp"
+            />
+
+        <ImageView
+            android:id="@+id/no_check_enter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:src="@drawable/cross_signin"/>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/pb_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:indeterminateDrawable="@drawable/progressbar"
+        android:visibility="gone"/>
+</FrameLayout>

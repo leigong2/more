@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:background="@color/abc_white"
+    android:layout_width="match_parent">
+
+    <include
+        android:id="@+id/nav_layout"
+        layout="@layout/details_navi_bar"/>
+
+    <com.jcodecraeer.xrecyclerview.XRecyclerView
+        android:layout_marginTop="56dp"
+        android:id="@+id/xrv_message_wall"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.jcodecraeer.xrecyclerview.XRecyclerView>
+
+    <EditText
+        android:visibility="gone"
+        android:inputType="text"
+        android:imeOptions="actionSend"
+        android:id="@+id/et_write_comment"
+        android:layout_gravity="bottom|center_horizontal"
+        android:hint="说点什么来约个伙伴吧……"
+        android:background="@color/pkgorder_detail_bg"
+        android:padding="8dp"
+        android:textColorHint="@color/merchant_item_distance"
+        android:gravity="center_vertical"
+        android:textSize="14sp"
+        android:textColor="@color/mainItemTagTitle"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"/>
+
+    <TextView
+        android:id="@+id/write_message_wall"
+        android:text="写留言"
+        android:layout_gravity="bottom|center_horizontal"
+        android:background="@drawable/write_message_wall"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textColor="@color/abc_black"
+        android:layout_marginBottom="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</FrameLayout>

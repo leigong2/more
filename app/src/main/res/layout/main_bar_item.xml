@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_bar_item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/abc_white"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/tv_create_time"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/mainItemDvider"
+        android:gravity="center"
+        android:text="— 2017-05-16 周二 —"
+        android:textColor="@color/abc_black"
+        android:textSize="14sp"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/main_bar_item_bgd"
+            android:layout_width="match_parent"
+            android:src="@drawable/default_more"
+            android:layout_height="@dimen/main_bar_avatar_height"
+            android:paddingLeft="@dimen/main_bar_padding_left"
+            android:paddingRight="@dimen/main_bar_padding_right"
+            android:scaleType="fitCenter"/>
+        <ImageView
+            android:id="@+id/main_bar_item_logo"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/main_bar_avatar_height"
+            android:paddingLeft="@dimen/main_bar_padding_left"
+            android:paddingRight="@dimen/main_bar_padding_right"
+            android:scaleType="centerCrop"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/main_bar_item_logo"
+            android:layout_alignLeft="@+id/main_bar_item_logo"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="16dp"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:id="@+id/orange_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="8dp"
+                android:src="@drawable/storelist_orange"
+                android:visibility="gone"
+                />
+
+            <ImageView
+                android:id="@+id/black_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="8dp"
+                android:src="@drawable/storelist_black"
+                android:visibility="gone"
+                />
+
+            <ImageView
+                android:id="@+id/coupon_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="8dp"
+                android:src="@drawable/storelist_coupon"
+                android:visibility="gone"
+                />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_bar_title_layout_height"
+        android:paddingLeft="@dimen/main_bar_padding_left"
+        android:paddingRight="@dimen/main_bar_padding_right">
+
+        <TextView
+            android:id="@+id/main_bar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/main_toolbar_change_city_width"
+            android:layout_toLeftOf="@+id/main_bar_item_distance"
+            android:maxLines="1"
+            android:textColor="@color/mainItemBarDesc"
+            android:textSize="@dimen/main_bar_title_size"/>
+
+        <TextView
+            android:id="@+id/main_bar_item_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/merchant_item_distance"
+            android:textSize="@dimen/main_bar_distance_size"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/main_bar_item_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:lineSpacingExtra="@dimen/main_bar_desc_linespace"
+        android:maxLines="2"
+        android:paddingLeft="@dimen/main_bar_padding_left"
+        android:paddingRight="@dimen/main_bar_padding_right"
+        android:textColor="@color/mainItemBarDesc"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:paddingLeft="@dimen/main_bar_padding_left"
+        android:paddingRight="@dimen/main_bar_padding_right">
+
+        <TextView
+            android:id="@+id/main_bar_bizarea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/main_bar_tag_size"/>
+
+        <TextView
+            android:id="@+id/main_bar_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/main_bar_divider_margin"
+            android:layout_marginRight="@dimen/main_bar_divider_margin"
+            android:layout_toRightOf="@id/main_bar_bizarea"
+            android:text="|"
+            android:textSize="@dimen/main_bar_tag_size"/>
+
+        <TextView
+            android:id="@+id/main_bar_tags"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/main_bar_line"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="@dimen/main_bar_tag_size"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_activities1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@color/mainItemDvider"
+        android:layout_marginLeft="16dp"
+        android:visibility="gone">
+
+        <View
+            android:id="@+id/activity_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/user_detail_divider"/>
+
+        <ImageView
+            android:scaleType="centerCrop"
+            android:id="@+id/activity_icon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/activity_divider"/>
+
+        <TextView
+            android:id="@+id/tv_activity_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/activity_icon"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@+id/activity_icon"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textSize="14dp"
+            android:textColor="@color/mainItemBarDesc"/>
+
+        <TextView
+            android:id="@+id/tv_activity_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_activity_title"
+            android:layout_below="@+id/tv_activity_title"
+            android:layout_marginBottom="3dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:textSize="12dp"
+            android:textColor="@color/merchant_address"
+            android:lineSpacingExtra="8dp"
+            android:maxLines="1"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_activities2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/mainItemDvider"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:visibility="gone">
+
+        <View
+            android:id="@+id/activity_divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/user_detail_divider"/>
+
+        <ImageView
+            android:scaleType="centerCrop"
+            android:id="@+id/activity_icon2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/activity_divider2"/>
+
+        <TextView
+            android:id="@+id/tv_activity_title2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/activity_icon2"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@+id/activity_icon2"
+            android:ellipsize="end"
+            android:textSize="14dp"
+            android:lines="1"
+            android:textColor="@color/mainItemBarDesc"/>
+
+        <TextView
+            android:id="@+id/tv_activity_content2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_activity_title2"
+            android:layout_below="@+id/tv_activity_title2"
+            android:layout_marginBottom="3dp"
+            android:layout_marginRight="16dp"
+            android:textSize="12dp"
+            android:textColor="@color/merchant_address"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:lineSpacingExtra="8dp"
+            android:maxLines="1"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_bartag_dvider_height"
+        android:layout_marginBottom="16dp"
+        android:background="@color/mainItemDvider"
+        android:orientation="horizontal"/>
+</LinearLayout>

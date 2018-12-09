@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/music_layout"
+    android:layout_width="78dp"
+    android:layout_height="wrap_content"
+    >
+
+    <RelativeLayout
+        android:id="@+id/music_bartag_logo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@mipmap/business_music_bg"
+        android:layout_centerHorizontal="true"
+        >
+
+        <ImageView
+            android:id="@+id/music_bartag_start"
+            android:layout_width="wrap_content"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/business_play_start"
+            android:layout_centerInParent="true"
+            android:paddingLeft="@dimen/main_bizarea_item_padding"
+            android:paddingRight="@dimen/main_bizarea_item_padding"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="78dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/mainItemTagTitle"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="4dp"
+        android:layout_below="@+id/music_bartag_logo"
+        android:text="常播"
+        android:id="@+id/main_bartag_name"
+        android:textSize="@dimen/main_bartag_tag_size" />
+
+</RelativeLayout>

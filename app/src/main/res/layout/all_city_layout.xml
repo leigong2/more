@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:visibility="gone"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_bg_all_city"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:src="@drawable/cityentrance"/>
+
+    <TextView
+        android:id="@+id/go_all_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="进入全城"
+        android:textColor="@color/abc_white"
+        android:textSize="15dp"/>
+
+    <TextView
+        android:id="@+id/merchant_count"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/go_all_city"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/home_all_city_bg"
+        android:gravity="center"
+        android:text="109+"
+        android:textColor="@color/abc_white"
+        android:textSize="15dp"/>
+
+</RelativeLayout>

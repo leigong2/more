@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp">
+
+    <TextView
+        android:id="@+id/item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="容纳人数"
+        android:textColor="@color/merchant_item_distance"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/item_Value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:text="80人"
+        android:textColor="@color/merchant_address"
+        android:textSize="12sp" />
+
+</LinearLayout>

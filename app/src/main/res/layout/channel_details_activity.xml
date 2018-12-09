@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_toolbar_height"
+        android:background="@color/black"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/nav_back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/btn_back_white"/>
+
+        <TextView
+            android:id="@+id/activity_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="24dp"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:textSize="20sp"/>
+
+        <LinearLayout
+            android:id="@+id/mchannel_lay"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/channel_header_img"
+                android:layout_width="24dp"
+                android:layout_height="24dp"/>
+
+            <TextView
+                android:id="@+id/channel_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:textColor="@color/white"
+                android:textSize="15sp"/>
+
+            <ImageView
+                android:id="@+id/iv_go"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/payment_success_triangle"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.moreclub.common.ui.view.scrollview.ObservableScrollView
+        android:id="@+id/channelScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:fadingEdge="none"
+        android:fadingEdgeLength="0dp"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:visibility="invisible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:id="@+id/fl_video"
+                android:visibility="visible"
+                android:layout_height="240dp">
+                <fm.jiecao.jcvideoplayer_lib.JCVideoPlayer
+                    android:id="@+id/videoplayer"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <ImageView
+                    android:id="@+id/iv_headline_detail_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:scaleType="centerCrop"/>
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view_divider"
+                android:layout_marginBottom="24dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/mainItemTagTitle"
+                android:textSize="20sp"/>
+
+            <WebView
+                android:id="@+id/channelWebview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@color/mainItemDvider"
+                />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="8dp"
+                >
+
+                <TextView
+                    android:id="@+id/comment"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="评论"
+                    android:textColor="@color/mainItemPkgTitle"
+                    android:textSize="14sp"
+                    />
+
+                <TextView
+                    android:id="@+id/comment_line"
+                    android:layout_width="50dp"
+                    android:layout_height="2dp"
+                    android:layout_alignLeft="@+id/comment"
+                    android:layout_below="@+id/comment"
+                    android:layout_marginTop="3dp"
+                    android:background="@color/black"
+                    />
+
+                <TextView
+                    android:id="@+id/good"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_toRightOf="@+id/comment"
+                    android:gravity="center_horizontal"
+                    android:paddingLeft="5dp"
+                    android:layout_centerInParent="true"
+                    android:paddingRight="5dp"
+                    android:text="点赞"
+                    android:textColor="@color/merchant_item_distance"
+                    android:textSize="14sp"
+                    />
+
+                <TextView
+                    android:id="@+id/good_line"
+                    android:layout_width="50dp"
+                    android:layout_height="2dp"
+                    android:layout_alignLeft="@+id/good"
+                    android:layout_below="@+id/good"
+                    android:layout_marginTop="3dp"
+                    android:background="@color/black"
+                    android:visibility="gone"
+                    />
+
+
+            </RelativeLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.jcodecraeer.xrecyclerview.XRecyclerView
+                    android:id="@+id/commentList"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:id="@+id/tv_no_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_talk"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:drawableTop="@drawable/comment_sofa"
+                    android:drawablePadding="10dp"
+                    android:text="就等你去评论"
+                    android:padding="32dp"
+                    android:textColor="@color/searchClearTagText"
+                    android:textSize="14sp"/>
+
+                <com.jcodecraeer.xrecyclerview.XRecyclerView
+                    android:id="@+id/goodList"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+    </com.moreclub.common.ui.view.scrollview.ObservableScrollView>
+
+    <ProgressBar
+        android:id="@+id/pb_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminateDrawable="@drawable/progressbar"
+        android:visibility="gone"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/mainItemDvider"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        >
+
+        <LinearLayout
+            android:id="@+id/comment_lay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/comment"
+                />
+
+            <TextView
+                android:id="@+id/bottom_comment_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/mainItemPkgTitle"
+                android:textSize="15sp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/like_lay"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:id="@+id/iv_good"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/like"
+                />
+
+            <TextView
+                android:id="@+id/bottom_good_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/mainItemPkgTitle"
+                android:textSize="15sp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/collect_lay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/btn_collect"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/channel_fav_black"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/share_lay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/btn_share"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/bottom_share"/>
+
+        </LinearLayout>
+
+        <EditText
+            android:visibility="gone"
+            android:inputType="text"
+            android:imeOptions="actionSend"
+            android:id="@+id/et_write_comment"
+            android:layout_gravity="bottom|center_horizontal"
+            android:hint="留个言评论下吧……"
+            android:background="@color/pkgorder_detail_bg"
+            android:padding="8dp"
+            android:textColorHint="@color/merchant_item_distance"
+            android:gravity="center_vertical"
+            android:textSize="14sp"
+            android:textColor="@color/mainItemTagTitle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

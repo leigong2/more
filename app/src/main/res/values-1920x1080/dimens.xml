@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="ucenter_play_more_height">220dp</dimen>
+    <dimen name="ucenter_username_scroll_height">40dp</dimen>
+    <dimen name="ucenter_scroll_height">190dp</dimen>
+    <dimen name="ucenter_avatar_scroll_height">160dp</dimen>
+    <dimen name="ucenter_fan_scroll_height">40dp</dimen>
+    <dimen name="ucenter_username_scroll_x">80dp</dimen>
+    <dimen name="ucenter_fan_scroll_x">80dp</dimen>
+    <dimen name="user_privilege_scroll_bpadding">80dp</dimen>
+    <dimen name="lines_width">10dp</dimen>
+    <dimen name="coupon_card_bg_height">220dp</dimen>
+    <dimen name="coupon_card_bg_devide_left">158dp</dimen>
+    <dimen name="coupon_card_bg_left_layout_width">173dp</dimen>
+</resources>

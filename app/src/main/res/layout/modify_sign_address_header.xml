@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/addressImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/main_address_signin_popup" />
+
+    <TextView
+        android:id="@+id/signTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@+id/addressImage"
+        android:text="当前签到酒吧"
+        android:textColor="@color/searchEntryTagText"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/errorSignMerchant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/signTag"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:text=""
+        android:textColor="@color/regLineText"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/errorTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/errorSignMerchant"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="8dp"
+        android:text="有误"
+        android:textColor="@color/searchEntryTagText"
+        android:textSize="14sp" />
+
+
+    <TextView
+        android:id="@+id/my"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/signTag"
+        android:layout_toRightOf="@+id/addressImage"
+        android:text="我在"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/searchEntryTagText"
+        android:textSize="14sp" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/my"
+        android:background="@color/mainItemDvider"
+        android:layout_marginTop="16dp"
+        />
+</RelativeLayout>

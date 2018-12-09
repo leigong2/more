@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <include
+        android:id="@+id/nav_layout"
+        layout="@layout/details_navi_bar" />
+
+    <com.baidu.mapapi.map.TextureMapView
+        android:id="@+id/map_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+         />
+
+    <RelativeLayout
+        android:id="@+id/mapNavLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="12dp"
+            android:src="@drawable/loc_tile"
+            />
+
+        <TextView
+            android:id="@+id/merchantNameTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@+id/icon"
+            android:layout_alignBaseline="@+id/icon"
+            android:text="酒馆"
+            android:textColor="@color/black"
+            />
+
+        <TextView
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:id="@+id/devideLine"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/merchantNameTV"
+            android:layout_margin="12dp"
+            android:background="@color/mainItemDvider"
+            />
+
+
+        <TextView
+            android:id="@+id/merchantAddressTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:textColor="@color/merchant_item_distance"
+            android:layout_below="@+id/devideLine"
+            />
+
+        <Button
+            android:id="@+id/mapNavButton"
+            android:layout_width="300dp"
+            android:text="地图导航"
+            android:textSize="16sp"
+            android:layout_height="40dp"
+            style="?android:attr/borderlessButtonStyle"
+            android:background="@drawable/merchantmap_btn"
+            android:layout_below="@+id/merchantAddressTV"
+            android:layout_marginTop="12dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black" />
+
+    </RelativeLayout>
+</LinearLayout>

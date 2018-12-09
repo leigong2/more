@@ -1,0 +1,911 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.moreclub.moreapp">
+
+    <!-- GPS -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+    <!-- Network -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <!-- Storage -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.DEVICE_POWER"/>
+
+    <permission
+        android:name="com.moreclub.moreapp.permission.MIPUSH_RECEIVE"
+        android:protectionLevel="signature"/>
+    <!-- 这里com.xiaomi.mipushdemo改成app的包名 -->
+    <uses-permission android:name="com.moreclub.moreapp.permission.MIPUSH_RECEIVE"/>
+    <uses-permission android:name="android.permission.READ_PROFILE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+
+    <!-- 这里com.xiaomi.mipushdemo改成app的包名 -->
+    <application
+        android:name=".app.MainApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme">
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="com.baidu.location.service_v2.2"/>
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.moreclub.moreapp.util.SimpleGlideModule"
+            android:value="GlideModule"/>
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="h60RA4XGImW8YkX0KOXX8GUYz8fi519s"/>
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="58d0fade8f4a9d7a8a0004c6"/>
+        <!-- <meta-data -->
+        <!-- android:name="UMENG_CHANNEL" -->
+        <!-- android:value="More"/> -->
+        <!-- 改为可自动变化的渠道名 -->
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${UMENG_CHANNEL_VALUE}"/>
+
+        <!-- 设置环信应用的AppKey -->
+        <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="other#more"/>
+        <!-- 声明SDK所需的service SDK核心功能 -->
+        <service
+            android:name="com.hyphenate.chat.EMChatService"
+            android:exported="true"/>
+        <service
+            android:name="com.hyphenate.chat.EMJobService"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <!-- 声明SDK所需的receiver -->
+        <receiver android:name="com.hyphenate.chat.EMMonitorReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+
+                <data android:scheme="package"/>
+            </intent-filter>
+            <!-- 可选filter -->
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- xiaomi push -->
+        <!-- <receiver -->
+        <!-- android:name="com.hyphenate.chat.EMMipushReceiver" -->
+        <!-- android:exported="true" -->
+        <!-- tools:ignore="ExportedReceiver"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE"/> -->
+        <!-- </intent-filter> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.xiaomi.mipush.MESSAGE_ARRIVED"/> -->
+        <!-- </intent-filter> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.xiaomi.mipush.ERROR"/> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+
+        <service
+            android:name="com.xiaomi.push.service.XMPushService"
+            android:enabled="true"
+            android:process=":pushservice"/>
+        <service
+            android:name="com.xiaomi.push.service.XMJobService"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:process=":pushservice"/>
+        <!-- 注：此service必须在3.0.1版本以后（包括3.0.1版本）加入 -->
+        <service
+            android:name="com.xiaomi.mipush.sdk.PushMessageHandler"
+            android:enabled="true"
+            android:exported="true"/>
+        <service
+            android:name="com.xiaomi.mipush.sdk.MessageHandleService"
+            android:enabled="true"/>
+        <!-- 注：此service必须在2.2.5版本以后（包括2.2.5版本）加入 -->
+        <receiver
+            android:name="com.xiaomi.push.service.receivers.NetworkStatusReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.xiaomi.push.service.receivers.PingReceiver"
+            android:exported="false"
+            android:process=":pushservice">
+            <intent-filter>
+                <action android:name="com.xiaomi.push.PING_TIMER"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".push.MorePushReceiver"
+            android:exported="true">
+
+            <!-- 这里com.xiaomi.mipushdemo.DemoMessageRreceiver改成app中定义的完整类名 -->
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.MESSAGE_ARRIVED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.ERROR"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- 保活 -->
+
+        <service
+            android:name=".push.PushWorkServer"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.moreclub.moreapp.push.PushWorkServer"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
+
+        <!-- More -->
+        <activity
+            android:name=".main.ui.activity.AdvertisementAvtivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTranTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".main.ui.activity.SuperMainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"/>
+        <activity
+            android:name=".main.ui.activity.SplashActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTranTheme">
+        </activity>
+        <activity
+            android:name=".main.ui.activity.MerchantCouponDetailsActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTranTheme"/>
+        <activity
+            android:name=".main.ui.activity.ModifyAutoSignAddress"
+            android:label="checkanswer"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"/>
+        <activity
+            android:name=".main.ui.activity.MainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"/>
+        <activity
+            android:name=".main.ui.activity.TotalBarsActivity"
+            android:label="totalbars"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity
+            android:name=".main.ui.activity.MerchantListViewActivity"
+            android:label="business"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"/>
+        <activity
+            android:name=".main.ui.activity.MChannelDetailsAcitivy"
+            android:label="business"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"/>
+        <activity
+            android:name=".main.ui.activity.MChannelListActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="business"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"/>
+        <activity
+            android:name=".main.ui.activity.MerchantDetailsViewActivity"
+            android:label="details"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"/>
+        <activity
+            android:name=".main.ui.activity.SignInteractSquareActivity"
+            android:label="details"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"/>
+        <activity
+            android:name=".main.ui.activity.SearchEntryActivity"
+            android:label="details"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"/>
+        <activity
+            android:name=".main.ui.activity.PublishMChannelActivity"
+            android:label="details"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden"/>
+        <activity
+            android:name=".main.ui.activity.TopicDetailsActivity"
+            android:label="details"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"/>
+        <activity
+            android:name=".main.ui.activity.FindAndSelectMerchantActivity"
+            android:label="details"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden"/>
+        <activity
+            android:name=".main.ui.activity.ChannelSelectTopicsActivity"
+            android:label="details"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"/>
+        <activity
+            android:name=".main.ui.activity.BizAreaBarsActivity"
+            android:label="details"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity
+            android:name=".main.ui.activity.SelectCityActivity"
+            android:label="details"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity
+            android:name=".main.ui.activity.MerchantMapActivity"
+            android:label="details"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity
+            android:name=".main.ui.activity.MerchantCardInfoActivity"
+            android:label="details"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity
+            android:name=".ucenter.ui.activity.UserModifyActivity"
+            android:label="details"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".ucenter.ui.activity.PackageCheckActivity"
+            android:label="details"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"
+            android:windowSoftInputMode="stateVisible|adjustResize"/>
+        <activity
+            android:name=".ucenter.ui.activity.UserModifyDetailActivity"
+            android:label="details"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".ucenter.ui.activity.UserModifyAddressActivity"
+            android:label="details"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".ucenter.ui.activity.UseLoginActivity"
+            android:label="details"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".ucenter.ui.activity.PlayMoreActivity"
+            android:label="usercenter"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+        </activity>
+        <activity
+            android:name=".ucenter.ui.activity.UserModifyAddressSubActivity"
+            android:label="usercenter"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity
+            android:name=".ucenter.ui.activity.UserRegActivity"
+            android:label="details"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".ucenter.ui.activity.UserCouponListActivity"
+            android:label="details"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".ucenter.ui.activity.UserRegHeaderNickActivity"
+            android:label="details"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".ucenter.ui.activity.AboutPrivilegeActivity"
+            android:label="details"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".ucenter.ui.activity.UserDetailsActivity"
+            android:label="details"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"/>
+        <activity
+            android:name=".ucenter.ui.activity.CooperationMerchantActivity"
+            android:label="details"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".ucenter.ui.activity.UserForgetActivity"
+            android:label="details"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".ucenter.ui.activity.ConfirmPasswordActivity"
+            android:label="details"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".ucenter.ui.activity.SettingActivity"
+            android:label="details"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity
+            android:name=".ucenter.ui.activity.QuestionFeedbackActivity"
+            android:label="details"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".ucenter.ui.activity.UserAboutActivity"
+            android:label="about"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".message.ui.activity.MessageSystemListActivity"
+            android:label="about"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".message.ui.activity.MessageSigninListActivity"
+            android:label="about"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".message.ui.activity.MessageFollowListActivity"
+            android:label="about"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"/>
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"/>
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"/>
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity
+            android:name=".packages.ui.activity.PackageSuperMainListActivity"
+            android:label="about"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".packages.ui.activity.PackageDetailsActivity"
+            android:label="PackageDetailsActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".packages.ui.activity.MoreOrderConfirmActivity"
+            android:label="about"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".packages.ui.activity.PayBillActivity"
+            android:label="about"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".packages.ui.activity.PayActivity"
+            android:label="about"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".packages.ui.activity.OrderCloseActivity"
+            android:label="about"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".packages.ui.activity.PaySucessActivity"
+            android:label="about"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".ucenter.ui.activity.MyOrderActivity"
+            android:label="myorder"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".ucenter.ui.activity.UserPrivilegeActivity"
+            android:label="myorder"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".ucenter.ui.activity.UserCollectionActivity"
+            android:label="myorder"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".ucenter.ui.activity.UserEvaluatePackageActivity"
+            android:label="myorder"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".ucenter.ui.activity.PkgOrderDetailActivity"
+            android:label="myorder"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".ucenter.ui.activity.UserCouponDetailsActivity"
+            android:label="myorder"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".packages.ui.activity.ApplyFefundActivity"
+            android:label="applyrefund"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".packages.ui.activity.RefundAuditActivity"
+            android:label="refundaudit"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".ucenter.ui.activity.UserSecurityActivity"
+            android:label="security"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".ucenter.ui.activity.UserDetailsReportActivity"
+            android:label="security"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".ucenter.ui.activity.BindPhoneActivity"
+            android:label="bindphone"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"/>
+        <activity
+            android:name=".ucenter.ui.activity.RenamePwdActivity"
+            android:label="renamepwd"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"/>
+        <activity
+            android:name=".ucenter.ui.activity.SecurityQuestionActivity"
+            android:label="question"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"/>
+        <activity
+            android:name=".information.ui.activity.HeadlineActivity"
+            android:label="headlinelist"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"/>
+        <activity
+            android:name=".information.ui.activity.HeadlineDetailActivity"
+            android:configChanges="orientation"
+            android:label="headlinedetail"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".information.ui.activity.NewStoreActivity"
+            android:label="newstore"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"/>
+        <activity
+            android:name=".information.ui.activity.ActivitiesActivity"
+            android:label="promotion"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"/>
+        <activity
+            android:name=".ucenter.ui.activity.UserCheckAnswerActivity"
+            android:label="checkanswer"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"/>
+        <activity
+            android:name=".information.ui.activity.LiveActivity"
+            android:label="live"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"/>
+        <activity
+            android:name=".ucenter.ui.activity.UserSecretActivity"
+            android:label="live"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"/>
+        <activity
+            android:name=".chat.ui.activity.ChatActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.hyphenate.easeui.ui.EaseBaiduMapActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"/>
+        <activity
+            android:name="com.hyphenate.easeui.ui.EaseShowBigImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"/>
+        <activity
+            android:name="com.hyphenate.easeui.ui.EaseShowVideoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"/>
+        <activity
+            android:name=".chat.ui.activity.ImageGridActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity
+            android:name=".chat.ui.activity.ChatGroupDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity
+            android:name=".chat.ui.activity.RecorderVideoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity
+            android:name=".information.ui.activity.MessageWallActivity"
+            android:label="messagewall"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"/>
+        <activity
+            android:name=".main.ui.activity.MerchantActivitiesActivity"
+            android:label="merchantactivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"/>
+        <activity
+            android:name=".information.ui.activity.MessageWallDetailActivity"
+            android:label="messagewalldetail"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"/>
+        <activity
+            android:name=".message.ui.activity.MessageWallListActivity"
+            android:label="messagewalllist"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"/>
+        <activity
+            android:name=".main.ui.activity.HomeStarActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTranTheme">
+        </activity>
+        <activity
+            android:name=".packages.ui.activity.SalesActivity"
+            android:label="sales"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"/>
+        <activity
+            android:name=".main.ui.activity.SignInterActivity"
+            android:label="signinter"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"/>
+        <activity
+            android:name=".main.ui.activity.AddSignInterActivity"
+            android:label="addsign"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"
+            android:windowSoftInputMode="adjustNothing"/>
+        <activity
+            android:name=".main.ui.activity.SignInterDetailActivity"
+            android:label="signinterdetail"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"/>
+        <activity
+            android:name=".message.ui.activity.MessageInteractionListActivity"
+            android:label="messageinteractionlist"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"/>
+        <activity
+            android:name=".ucenter.ui.activity.BirthdayChoiceActivity"
+            android:label="birthdaychoice"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"/>
+        <activity
+            android:name=".ucenter.ui.activity.JobChoiceActivity"
+            android:label="jobchoice"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"/>
+        <activity
+            android:name=".ucenter.ui.activity.HobbyChoiceActivity"
+            android:label="hobbychoice"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"/>
+        <activity
+            android:name=".ucenter.ui.activity.BrandActivity"
+            android:label="brandchoice"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"/>
+        <activity
+            android:name=".ucenter.ui.activity.WineLikeActivity"
+            android:label="winelikechoice"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"/>
+        <activity
+            android:name=".ucenter.ui.activity.BookLikeActivity"
+            android:label="booklikechoice"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"/>
+        <activity
+            android:name=".ucenter.ui.activity.FoodLikeActivity"
+            android:label="foodlikechoice"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"/>
+
+        <service
+            android:name=".main.ui.service.UpdateService"
+            android:enabled="true"
+            android:priority="1000">
+        </service>
+
+        <receiver
+            android:name=".main.ui.receiver.UpdateReceiver"
+            android:enabled="true"/>
+
+        <activity
+            android:name=".main.ui.activity.DialogInstallActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity
+            android:name=".main.ui.activity.SignInterHotalActivity"
+            android:label="foodlikechoice"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"/>
+        <activity
+            android:name=".main.ui.activity.MChannelCommentActivity"
+            android:label="mchannelcomment"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"/>
+        <activity android:name=".main.ui.activity.MChannelDetailsOldActivity"/>
+        <!--
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.more.zune.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+
+            &lt;!&ndash; 元数据 &ndash;&gt;
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"
+                tools:replace="android:resource"/>
+        </provider>
+        -->
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/picker_provider_paths"
+                tools:replace="name,resource"/>
+        </provider>
+
+        <activity
+            android:name=".ucenter.ui.activity.UserDetailV2Activity"
+            android:label="userdetailv2"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"/>
+        <activity
+            android:name="me.iwf.photopicker.PhotoPickerActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+        <activity
+            android:name="me.iwf.photopicker.PhotoPagerActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+        <activity
+            android:name=".ucenter.ui.activity.UserImagesActivity"
+            android:label="userimages"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"/>
+        <activity
+            android:name=".ucenter.ui.activity.UserGoodsActivity"
+            android:label="usergoods"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"/>
+        <activity
+            android:name=".ucenter.ui.activity.UserUgcListActivity"
+            android:label="myugcchannel"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"/>
+        <activity
+            android:name=".ucenter.ui.activity.UserUgcDetailActivity"
+            android:label="userugcchannel"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"/>
+        <activity
+            android:name=".main.ui.activity.SignInterTotalActivity"
+            android:label="signintertotal"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"/>
+        <activity
+            android:name=".main.ui.activity.MySignInterListActivity"
+            android:label="mysigninterlist"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSwipeBackTheme"/>
+    </application>
+
+</manifest>

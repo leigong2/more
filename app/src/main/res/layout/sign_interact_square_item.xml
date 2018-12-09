@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="16dp"
+              android:background="@android:color/transparent"
+              android:gravity="center_horizontal"
+              android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:id="@+id/sign_inter_item"
+        android:layout_width="160dp"
+        android:layout_marginTop="4dp"
+        android:layout_height="154dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/base_image_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/pinzuo_bg_bgm"/>
+
+        <TextView
+            android:id="@+id/content_sign_inter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:ellipsize="end"
+            android:lineSpacingExtra="6dp"
+            android:lines="3"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="8dp"
+            android:textColor="@color/abc_white"
+            android:textSize="12sp"/>
+
+        <ImageView
+            android:id="@+id/base_image_drink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="16dp"
+            android:src="@drawable/drink_1"/>
+
+    </RelativeLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/header_img"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:focusable="false"
+        android:scaleType="centerCrop"
+        app:civ_border_color="@color/searchClearTagText"
+        app:civ_border_width="1dp"/>
+
+    <TextView
+        android:id="@+id/nameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:id="@+id/sex_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/femenine"
+            />
+
+        <TextView
+            android:id="@+id/age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:textColor="@color/package_edittext_line"
+            android:textSize="12sp"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/searchEntryTag"
+        android:layout_marginTop="4dp"
+        android:textSize="12sp"
+        />
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/ll_address_lay"
+        android:layout_width="wrap_content"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/addr_img"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/address_activedetail"
+            />
+
+        <TextView
+            android:id="@+id/addr_name"
+            android:lines="1"
+            android:ellipsize="end"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="16dp"
+            android:textColor="@color/orange"
+            android:textSize="12sp"
+            />
+    </LinearLayout>
+    <View
+        android:layout_marginTop="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+</LinearLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    >
+
+    <com.moreclub.moreapp.ucenter.ui.view.ViewPagerFixed
+        android:id="@+id/sceneViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+    </com.moreclub.moreapp.ucenter.ui.view.ViewPagerFixed>
+
+    <TextView
+        android:id="@+id/sceneName"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:textColor="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:text=""/>
+
+</RelativeLayout>

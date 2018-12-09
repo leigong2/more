@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+                android:id="@+id/rl_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_alignParentTop="true"
+        android:id="@+id/main_packages_logo"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_packages_logo_height"
+        android:paddingLeft="@dimen/main_packages_item_lpadding"
+        android:scaleType="centerCrop" />
+
+    <ImageButton
+        android:id="@+id/package_collect_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/collect_fav_highlight"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="32dp"
+        android:layout_alignTop="@+id/package_image_banner_iv"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/transparent"
+        />
+
+    <TextView
+        android:id="@+id/main_packages_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/main_packages_logo"
+        android:layout_marginTop="@dimen/main_packages_bar_tmargin"
+        android:paddingLeft="@dimen/main_packages_title_lpadding"
+        android:lines="1"
+        android:ellipsize="end"
+        android:textColor="@color/mainItemPkgTitle"
+        android:textSize="@dimen/main_packages_title_size" />
+
+    <TextView
+        android:id="@+id/main_packages_bar_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/main_packages_title"
+        android:layout_marginTop="@dimen/main_packages_bar_tmargin"
+        android:paddingBottom="@dimen/main_packages_bar_bpadding"
+        android:paddingLeft="@dimen/main_packages_title_lpadding"
+        android:textColor="@color/shit_yellow"
+        android:textSize="@dimen/main_packages_bar_size" />
+
+    <TextView
+        android:id="@+id/main_packages_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/main_packages_title"
+        android:layout_marginTop="@dimen/main_packages_bar_tmargin"
+        android:layout_toRightOf="@id/main_packages_bar_name"
+        android:paddingLeft="@dimen/main_packages_title_lpadding"
+        android:textColor="@color/orange_red"
+        android:textSize="@dimen/main_packages_bar_size" />
+
+    <TextView
+        android:id="@+id/main_packages_old_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/main_packages_title"
+        android:layout_marginTop="@dimen/main_packages_bar_tmargin"
+        android:layout_toRightOf="@id/main_packages_price"
+        android:paddingLeft="@dimen/main_packages_title_lpadding"
+        android:textColor="@color/mainTagName"
+        android:textSize="@dimen/main_packages_bar_size"
+        android:visibility="gone"
+        />
+</RelativeLayout>

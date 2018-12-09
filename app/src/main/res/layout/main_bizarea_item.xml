@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingBottom="@dimen/main_bizarea_item_margin_bottom"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="@dimen/main_bartag_title_width"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/main_bizarea_item_padding"
+        android:text="@string/main_item_title_bizare"
+        android:textStyle="bold"
+        android:textColor="@color/mainItemTagTitle"
+        android:textSize="@dimen/main_bizarea_title_text_size" />
+
+    <com.moreclub.common.ui.view.VerticalDashView
+        android:layout_width="@dimen/main_bizarea_divider_width"
+        android:layout_height="@dimen/main_bizarea_item_height"
+        android:layout_marginTop="@dimen/main_bizarea_item_margin_top"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/main_bizare_item_rv"
+        android:layout_width="match_parent"
+        android:fadingEdge="none"
+        android:layout_marginLeft="@dimen/main_bizarea_rv_left_margin"
+        android:layout_height="@dimen/main_bizarea_item_height"
+        android:layout_marginTop="@dimen/main_bizarea_item_margin_top"
+        android:scrollbars="none">
+
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

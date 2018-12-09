@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    >
+
+    <RelativeLayout
+        android:background="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_toolbar_height">
+        <ImageView
+            android:id="@+id/totalbars_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/btn_back_white"
+            android:layout_marginLeft="@dimen/totalbars_back_lmargin"
+            />
+
+        <EditText
+            android:id="@+id/totalbars_et"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/totalbars_et_height"
+            android:layout_marginLeft="@dimen/totalbars_et_lmargin"
+            android:layout_marginTop="@dimen/searchentry_et_tmargin"
+            android:layout_toRightOf="@id/totalbars_back"
+            android:background="@drawable/totalbars_et_bg"
+            android:layout_marginRight="@dimen/totalbars_et_rmargin"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:singleLine="true"
+            android:hint="搜索酒吧关键字"
+            android:paddingLeft="@dimen/totalbars_et_lpadding"
+            android:layout_centerVertical="true"
+            android:imeOptions="actionSearch"
+            android:textColor="@color/mainItemTagTitle"
+            android:textColorHint="@color/searchClearTagText"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:textSize="@dimen/searchentry_tag_title_size" />
+    </RelativeLayout>
+
+    <com.jcodecraeer.xrecyclerview.XRecyclerView
+        android:id="@+id/totalbars_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadingEdge="none"
+        android:scrollbars="none"></com.jcodecraeer.xrecyclerview.XRecyclerView>
+
+</LinearLayout>

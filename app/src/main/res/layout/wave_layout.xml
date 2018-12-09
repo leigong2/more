@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="80dp"
+    android:layout_height="80dp">
+    <com.moreclub.moreapp.main.ui.view.LoadView
+        android:layout_centerHorizontal="true"
+        android:id="@+id/load_bar1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:color="#FFCC00"
+        app:radius="20dp"/>
+    <com.moreclub.moreapp.main.ui.view.LoadView
+        android:layout_centerHorizontal="true"
+        android:id="@+id/load_bar2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:color="#FFCC00"
+        app:radius="20dp"/>
+    <com.moreclub.moreapp.main.ui.view.LoadView
+        android:layout_centerHorizontal="true"
+        android:id="@+id/load_bar3"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:color="#FFCC00"
+        app:radius="20dp"/>
+    <com.moreclub.moreapp.main.ui.view.LoadView
+        android:layout_centerHorizontal="true"
+        android:id="@+id/load_bar4"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:color="#FFCC00"
+        app:radius="20dp"/>
+</FrameLayout>

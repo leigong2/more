@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+    <include
+        android:id="@+id/nav_layout"
+        layout="@layout/details_navi_bar"/>
+
+    <TextView
+        android:id="@+id/tv_question"
+        style="@style/SettingTextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:layout_below="@+id/nav_layout"
+        android:layout_marginLeft="16dp"
+        android:gravity="center_vertical"
+        android:text="问题"/>
+
+    <LinearLayout
+        android:id="@+id/ll_questions"
+        android:layout_alignTop="@+id/tv_question"
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_spread"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_question"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/tv_question"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/arrow_next"/>
+
+    <TextView
+        android:id="@+id/tv_answer"
+        style="@style/SettingTextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:layout_below="@+id/tv_question"
+        android:layout_marginLeft="16dp"
+        android:gravity="center_vertical"
+        android:text="答案"/>
+
+    <EditText
+        android:id="@+id/et_phone_number"
+        style="@style/SettingEditTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_answer"
+        android:layout_alignTop="@+id/tv_answer"
+        android:layout_below="@+id/tv_question"
+        android:layout_marginLeft="72dp"
+        android:layout_marginRight="10dp"
+        android:hint="请输入密保答案"/>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignLeft="@+id/et_phone_number"
+        android:layout_below="@+id/et_phone_number"
+        android:layout_marginRight="10dp"
+        android:background="@color/mainItemDvider"
+        />
+
+    <View
+        android:id="@+id/view_error_line2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/et_phone_number"
+        android:layout_marginLeft="72dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/mainItemPkgBar"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/tv_error"
+        style="@style/SettingTextErrorStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_phone_number"
+        android:layout_marginLeft="72dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="8dp"
+        android:text="回答错误,请重新输入"
+        android:visibility="invisible"/>
+
+
+    <Button
+        android:id="@+id/rename_make_sure"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/mainItemPkgBar"
+        android:text="确认"
+        android:textColor="@color/black"
+        android:textSize="14sp"/>
+
+</RelativeLayout>
+

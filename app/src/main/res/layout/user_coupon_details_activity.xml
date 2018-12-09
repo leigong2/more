@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    >
+
+    <include layout="@layout/details_navi_bar" android:id="@+id/nav_layout"/>
+
+    <com.moreclub.common.ui.view.scrollview.ObservableScrollView
+        android:id="@+id/detailsScrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white"
+        android:fadingEdge="none"
+        android:fadingEdgeLength="0dp"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/user_coupon_support_item" android:id="@+id/coupon_layout"/>
+
+            <RelativeLayout
+                android:id="@+id/lock_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="12dp"
+                android:visibility="gone"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/coupon_lock_tips"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="@color/mainItemPkgTitle"
+                    android:text="@string/coupon_lock_tip"
+                    android:lineSpacingExtra="5dp"
+                    />
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/mainItemDvider"
+                android:layout_marginTop="16dp"
+                />
+
+            <LinearLayout
+                android:id="@+id/couponNameLay"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center_vertical"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="@color/merchant_address"
+                    android:text="礼券名称"
+                    android:layout_marginLeft="16dp"
+                    />
+
+                <TextView
+                    android:id="@+id/coupon_name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:layout_marginLeft="16dp"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/mainItemDvider"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="@color/merchant_address"
+                    android:text="   有效期"
+                    android:layout_marginLeft="16dp"
+                    />
+
+                <TextView
+                    android:id="@+id/user_coupon_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:layout_marginLeft="16dp"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/mainItemDvider"
+                />
+
+            <LinearLayout
+                android:id="@+id/couponDesLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="16dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="@color/merchant_address"
+                    android:text="使用说明"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    />
+
+                <TextView
+                    android:id="@+id/user_coupon_des"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:lineSpacingExtra="5dp"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/mainItemDvider"
+                />
+
+
+            </LinearLayout>
+    </com.moreclub.common.ui.view.scrollview.ObservableScrollView>
+
+
+</LinearLayout>

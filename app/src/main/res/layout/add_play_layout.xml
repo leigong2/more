@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="160dp"
+    android:layout_height="160dp"
+    android:visibility="visible">
+
+    <ImageView
+        android:id="@+id/iv_bg_all_city"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:src="@drawable/cityentrance"/>
+
+    <RelativeLayout
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/go_all_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:drawablePadding="3dp"
+            android:drawableRight="@drawable/ucenter_triangle"
+            android:text="约玩公告"
+            android:textColor="@color/orange"
+            android:textSize="15dp"/>
+
+        <TextView
+            android:id="@+id/invite_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/go_all_city"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rect_orange"
+            android:paddingBottom="2dp"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:paddingTop="2dp"
+            android:text="+128"
+            android:textSize="10dp"
+            android:textColor="@color/orange"/>
+
+        <com.moreclub.moreapp.main.ui.view.VerticalViewPager
+            android:id="@+id/vp_users"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/invite_count"
+            android:layout_height="56dp">
+
+        </com.moreclub.moreapp.main.ui.view.VerticalViewPager>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

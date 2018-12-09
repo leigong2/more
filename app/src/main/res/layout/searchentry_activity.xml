@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_toolbar_height">
+
+        <ImageView
+            android:id="@+id/searchentry_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/searchentry_close_lmargin"
+            android:src="@drawable/searchentry_close" />
+
+        <ImageView
+            android:id="@+id/searchentry_btn_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/searchentry_search_lmargin"
+            android:layout_toRightOf="@id/searchentry_close"
+            android:src="@drawable/searchentry_btn_search" />
+
+        <EditText
+            android:id="@+id/searchentry_et"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/searchentry_et_height"
+            android:layout_marginLeft="@dimen/searchentry_et_lmargin"
+            android:layout_marginTop="@dimen/searchentry_et_tmargin"
+            android:layout_toLeftOf="@+id/searchentry_search_text"
+            android:layout_toRightOf="@id/searchentry_btn_search"
+            android:background="@null"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@color/mainItemTagTitle"
+            android:textColorHint="@color/searchClearTagText"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:textSize="@dimen/searchentry_tag_title_size" />
+
+        <TextView
+            android:id="@+id/searchentry_search_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/searchentry_search_lmargin"
+            android:layout_marginRight="@dimen/searchentry_close_lmargin"
+            android:text="@string/searchentry_search"
+            android:textColor="@color/mainItemTagTitle"
+            android:textSize="@dimen/searchentry_tag_title_size" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/searchentry_dvider_height"
+            android:layout_alignParentBottom="true"
+            android:background="@color/mainItemDvider"
+            android:orientation="horizontal" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/searchentry_hot_tag_tmargin"
+        android:layout_marginLeft="@dimen/searchentry_history_text_lmargin"
+        android:layout_marginTop="@dimen/searchentry_hot_tag_tmargin"
+        android:text="@string/searchentry_hostkeys"
+        android:textColor="@color/mainItemTagTitle"
+        android:textSize="@dimen/searchentry_tag_title_size"
+        android:textStyle="bold" />
+
+    <com.moreclub.common.ui.view.tag.TagFlowLayout
+        android:id="@+id/searchentry_hotview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/searchentry_history_tag_lmargin"
+        android:paddingRight="@dimen/searchentry_history_tag_lmargin">
+
+    </com.moreclub.common.ui.view.tag.TagFlowLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/searchentry_hot_tag_tmargin"
+            android:layout_marginLeft="@dimen/searchentry_history_text_lmargin"
+            android:layout_marginTop="@dimen/searchentry_history_tag_tmargin"
+            android:text="@string/searchentry_history"
+            android:textColor="@color/mainItemTagTitle"
+            android:textSize="@dimen/searchentry_tag_title_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/searchentry_clearhistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/searchentry_hot_tag_tmargin"
+            android:layout_marginRight="@dimen/searchentry_history_text_lmargin"
+            android:layout_marginTop="@dimen/searchentry_history_tag_tmargin"
+            android:text="@string/searchentry_clearhistory"
+            android:textColor="@color/searchClearTagText"
+            android:textSize="@dimen/searchentry_tag_size" />
+    </RelativeLayout>
+
+    <com.moreclub.common.ui.view.tag.TagFlowLayout
+        android:id="@+id/searchentry_historyview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/searchentry_history_tag_lmargin"
+        android:paddingRight="@dimen/searchentry_history_tag_lmargin">
+
+    </com.moreclub.common.ui.view.tag.TagFlowLayout>
+
+</LinearLayout>

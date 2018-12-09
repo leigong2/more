@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:layout_gravity="center_horizontal"
+    android:orientation="horizontal"
+    android:paddingTop="8dp">
+
+    <TextView
+        android:id="@+id/pkgorder_detail_code_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#00B46F"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/pkgorder_detail_code_prefix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:background="@drawable/coupon_code_bg"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/pkgorder_detail_code_suffix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:background="@drawable/coupon_code_bg"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:textSize="14sp" />
+
+</LinearLayout>

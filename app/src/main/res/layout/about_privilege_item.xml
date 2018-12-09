@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+
+    <ImageView
+        android:id="@+id/header_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/login_privilege" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/header_img"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_toRightOf="@+id/header_img"
+        android:text=""
+        android:textColor="@color/mainItemPkgTitle"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/des"
+        android:layout_marginRight="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/title"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="16dp"
+        android:text=""
+        android:textColor="@color/merchant_item_distance"
+        android:textSize="14sp" />
+
+
+    <TextView
+        android:id="@+id/icon"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/mainItemDvider"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/des"
+        />
+
+</RelativeLayout>

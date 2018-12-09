@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_toolbar_height">
+        <View
+            android:id="@+id/selectcity_nav"
+            android:layout_width="@dimen/selectcity_title_lmargin"
+            android:layout_height="match_parent"/>
+
+        <ImageView
+            android:id="@+id/selectcity_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/searchentry_close_lmargin"
+            android:src="@drawable/searchentry_close" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/selectcity_title_lmargin"
+            android:text="@string/selectcity_title"
+            android:textColor="@color/mainItemTagTitle"
+            android:textSize="@dimen/selectcity_item_title_size" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/searchentry_dvider_height"
+            android:layout_alignParentBottom="true"
+            android:background="@color/mainItemDvider"
+            android:orientation="horizontal" />
+    </RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/selectcity_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/main_toolbar"
+        android:fadingEdge="none"
+        android:scrollbars="none"></android.support.v7.widget.RecyclerView>
+</LinearLayout>

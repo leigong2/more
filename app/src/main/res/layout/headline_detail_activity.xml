@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.moreclub.common.ui.view.scrollview.ObservableScrollView
+
+        android:id="@+id/detailsScrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white"
+        android:fadingEdge="none"
+        android:fadingEdgeLength="0dp"
+        android:overScrollMode="never"
+        android:scrollbars="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/abc_white"
+            android:visibility="gone">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:id="@+id/fl_video"
+                android:visibility="visible"
+                android:layout_height="240dp">
+                <fm.jiecao.jcvideoplayer_lib.JCVideoPlayer
+                    android:id="@+id/videoplayer"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <ImageView
+                    android:id="@+id/iv_headline_detail_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:scaleType="centerCrop"/>
+
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/iv_play"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="105dp"
+                android:src="@drawable/play_list"
+                android:visibility="gone"/>
+
+            <ProgressBar
+                android:id="@+id/pb_play"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="105dp"
+                android:indeterminateDrawable="@drawable/progressbar"
+                android:visibility="gone"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_user_thumb"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/fl_video"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="6dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/card_logo"/>
+
+            <TextView
+                android:id="@+id/tv_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/iv_user_thumb"
+                android:layout_alignTop="@+id/iv_user_thumb"
+                android:layout_marginLeft="72dp"
+                android:gravity="center_vertical"
+                android:text="More出品"
+                android:textColor="@color/abc_black"
+                android:textSize="14dp"/>
+
+            <TextView
+                android:id="@+id/tv_create_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tv_user"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/tv_user"
+                android:layout_below="@+id/fl_video"
+                android:layout_marginRight="16dp"
+                android:gravity="center_vertical"
+                android:text="05-11"/>
+
+            <View
+                android:id="@+id/view_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/tv_user"
+                android:layout_marginTop="8dp"
+                android:background="@color/mainItemDvider"/>
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view_divider"
+                android:layout_marginBottom="24dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/mainItemTagTitle"
+                android:textSize="20sp"/>
+
+
+            <WebView
+                android:id="@+id/wv_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_title"/>
+
+            <TextView
+                android:id="@+id/tv_talk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/wv_detail"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="32dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:text="大家都在说什么"
+                android:textColor="@color/merchant_item_distance"
+                android:textSize="14sp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/wv_detail"
+                android:layout_marginTop="40dp"
+                android:layout_toLeftOf="@+id/tv_talk"
+                android:background="@color/bgColor_divier"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/wv_detail"
+                android:layout_marginTop="40dp"
+                android:layout_toRightOf="@+id/tv_talk"
+                android:background="@color/bgColor_divier"/>
+
+            <TextView
+                android:id="@+id/tv_no_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="134sp"
+                android:layout_below="@+id/tv_talk"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="暂无评论内容"
+                android:textColor="@color/merchant_address"
+                android:textSize="14sp"/>
+
+            <com.jcodecraeer.xrecyclerview.XRecyclerView
+                android:id="@+id/xrv_headline_comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_talk"
+                android:layout_marginBottom="50dp"/>
+        </RelativeLayout>
+    </com.moreclub.common.ui.view.scrollview.ObservableScrollView>
+
+    <include
+        android:id="@+id/nav_layout"
+        layout="@layout/details_navi_bar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/mainTagName"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_write_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:background="@drawable/rect_headline_comment"
+            android:hint="请输入消息..."
+            android:imeOptions="actionSend"
+            android:inputType="text"
+            android:padding="6dp"
+            android:textColor="@color/abc_black"
+            android:textSize="14dp"/>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/pb_headline_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminateDrawable="@drawable/progressbar"/>
+
+</RelativeLayout>

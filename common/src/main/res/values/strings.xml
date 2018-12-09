@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">core</string>
+    <string name="tips_not_wifi">您当前正在使用移动网络，继续播放将消耗流量</string>
+    <string name="tips_not_wifi_confirm">继续播放</string>
+    <string name="tips_not_wifi_cancel">停止播放</string>
+    <string name="no_url">播放地址无效</string>
+    <string name="replay">重播</string>
+    <string name="listview_header_hint_normal">下拉刷新</string>
+    <string name="listview_header_hint_release">释放立即刷新</string>
+    <string name="listview_loading">正在加载...</string>
+    <string name="nomore_loading">没有了</string>
+    <string name="refreshing">正在刷新...</string>
+    <string name="refresh_done">刷新完成</string>
+    <string name="loading_done">加载完成</string>
+    <string name="listview_header_last_time">上次更新时间：</string>
+</resources>

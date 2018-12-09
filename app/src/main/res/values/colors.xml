@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="mainItemTitleZh">#333333</color>
+    <color name="mainItemTitleEn">#333333</color>
+    <color name="mainItemTagTitle">#333333</color>
+    <color name="mainItemBarDesc">#333333</color>
+    <color name="mainItemPkgTitle">#333333</color>
+    <color name="mainItemDvider">#F0F0F0</color>
+    <color name="mainItemPkgBar">#ddb544</color>
+    <color name="mainItemPkgPrice">#D0011B</color>
+    <color name="coupon_bg_use">#272727</color>
+    <color name="coupon_bg_nouse">#cccccc</color>
+    <color name="merchant_item_name">#111111</color>
+    <color name="merchant_item_distance">#999999</color>
+    <color name="mainTagName">#999999</color>
+    <color name="mainMoreBar">#ddb544</color>
+    <color name="merchant_price">#ddb544</color>
+    <color name="merchant_address">#666666</color>
+    <color name="searchEntryTag">#F0F0F0</color>
+    <color name="searchEntryTagText">#666666</color>
+    <color name="searchClearTagText">#999999</color>
+    <color name="regButton">#ffcc00</color>
+    <color name="regLineText">#ddb544</color>
+
+    <color name="feedbackHint">#999999</color>
+    <color name="feedbackText">#333333</color>
+
+    <color name="package_list_tag">#ddb544</color>
+    <color name="package_list_price">#D0011B</color>
+
+    <color name="myorder_tab_text_active">#333333</color>
+    <color name="myorder_tab_text">#999999</color>
+    <color name="myorder_item_bottom_layout">#FFFDF5</color>
+    <color name="myorder_item_title">#333333</color>
+    <color name="myorder_item_total_price">#E70E0E</color>
+    <color name="myorder_item_total">#666666</color>
+    <color name="myorder_item_result_action">#ddb544</color>
+
+    <color name="package_edittext_line">#cccccc</color>
+    <color name="package_confirm_price">#e70e0e</color>
+
+    <color name="pkgorder_detail_bg">#F8F8F8</color>
+    <color name="pkgorder_detail_dianyuan">#999999</color>
+    <color name="pkgorder_detail_status_not_use">#00BF46</color>
+    <color name="pkgorder_detail_status_used">#999999</color>
+
+
+    <color name="commonTitleColor">#333333</color>
+    <color name="commonTextColor">#666666</color>
+    <color name="commonThinTextColor">#999999</color>
+
+    <color name="orangeText">#ddb544</color>
+    <color name="orange">#FFCC00</color>
+
+    <color name="bill_total_price">#fe9933</color>
+    <color name="order_status_no_pay">#CA142A</color>
+    <color name="order_status_use">#0A945E</color>
+    <color name="order_status_exit_price">#CA142A</color>
+    <color name="user_privilege_division_expire">#666666</color>
+    <color name="activity_item_circle_normal">#EEEEEE</color>
+    <color name="live_activity_item_alpha">#44333333</color>
+    <color name="live_activity_bg_alpha">#33333333</color>
+    <color name="live_activity_good">#B2FEE390</color>
+    <color name="live_list_deadline">#80000000</color>
+
+
+    <color name="sign">#33456A</color>
+    <color name="sign_circle_text">#482CCB5C</color>
+    <color name="follow_normal">#00000000</color>
+    <color name="star">#FFAD00</color>
+    <color name="star_alpha">#48FFAD00</color>
+    <color name="night">#FB3039</color>
+    <color name="night_alpha">#48FB3039</color>
+    <color name="life">#FB691D</color>
+    <color name="life_alpha">#48FB691D</color>
+    <color name="self">#296BFF</color>
+    <color name="self_alpha">#48296BFF</color>
+    <color name="text_color_merchant">#FFC3A4</color>
+
+    <color name="sign_space_line">#9295A1</color>
+    <color name="sign_space_send">#80FFFFFF</color>
+    <color name="sign_space_send_select">#61AAE7</color>
+    <color name="check_package_error">#FF001F</color>
+
+    <color name="star_location_change">#ddb544</color>
+    <color name="channel_item_content">#222634</color>
+    <color name="channel_item_comment">#f8f8f8</color>
+
+    <color name="shit_yellow">#DDB544</color>
+    <color name="orange_red">#fe6e0e </color>
+    <color name="paysucess_header_bg">#252b46</color>
+
+    <color name="bind_tag">#e9e9e9 </color>
+    <color name="user_detail_photo">#3e3b5a </color>
+    <color name="user_detail_divider">#edecef </color>
+    <color name="user_detail_default_photo">#edf1f6 </color>
+    <color name="user_detail_send">#803e3b5a </color>
+    <color name="user_detail_activity_time">#9d9d9d </color>
+    <color name="tab_text_normal">#212121</color>
+    <color name="comui_tab_text_color">#ff333333</color>
+    <color name="swiperefresh_color1">#000000</color>
+</resources>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/abc_white"
+    android:layout_height="match_parent">
+
+    <com.jcodecraeer.xrecyclerview.XRecyclerView
+        android:id="@+id/xrv_message_wall_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.jcodecraeer.xrecyclerview.XRecyclerView>
+
+    <EditText
+        android:inputType="text"
+        android:imeOptions="actionSend"
+        android:id="@+id/et_reply_comment"
+        android:layout_gravity="bottom|center_horizontal"
+        android:hint="说点什么来约个伙伴吧……"
+        android:background="@color/pkgorder_detail_bg"
+        android:padding="8dp"
+        android:textColorHint="@color/merchant_item_distance"
+        android:gravity="center_vertical"
+        android:textSize="14sp"
+        android:textColor="@color/mainItemTagTitle"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"/>
+
+    <include
+        android:id="@+id/about_toolbar"
+        layout="@layout/details_navi_bar" />
+
+</FrameLayout>

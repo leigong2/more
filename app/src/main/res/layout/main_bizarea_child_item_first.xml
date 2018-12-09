@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="@dimen/main_bizarea_firtst_item_width"
+android:layout_height="@dimen/main_bizarea_item_height"
+android:orientation="horizontal">
+
+<ImageView
+    android:id="@+id/main_bizare_allcity"
+    android:layout_width="match_parent"
+    android:paddingRight="@dimen/main_bizarea_item_padding"
+    android:layout_height="@dimen/main_bizarea_item_height"
+    android:src="@drawable/main_all_cities" />
+</LinearLayout>

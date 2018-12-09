@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/nav_layout"
+        layout="@layout/details_navi_bar"/>
+
+    <RelativeLayout
+        android:id="@+id/account_security_lay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/nav_layout">
+
+        <TextView
+            android:id="@+id/addressName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:text="账号设置与安全"
+            android:textColor="@color/mainItemTagTitle"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/arrow_next"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/mainItemDvider"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/account_secret_lay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/account_security_lay">
+
+        <TextView
+            android:id="@+id/secretName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:text="隐私"
+            android:textColor="@color/mainItemTagTitle"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/arrow_next"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/mainItemDvider"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/question_lay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/account_secret_lay">
+
+        <TextView
+            android:id="@+id/questionName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:text="常见问题与反馈"
+            android:textColor="@color/mainItemTagTitle"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/arrow_next"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/mainItemDvider"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/clear_lay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/question_lay">
+
+        <TextView
+            android:id="@+id/clearName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:text="缓存清理"
+            android:textColor="@color/mainItemTagTitle"/>
+
+        <ImageView
+            android:id="@+id/iv_setting_cache"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/arrow_next"/>
+
+        <TextView
+            android:id="@+id/tv_setting_cache"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/iv_setting_cache"
+            android:paddingRight="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/mainItemDvider"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/about_lay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/clear_lay">
+
+        <TextView
+            android:id="@+id/aboutName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:text="关于More"
+            android:textColor="@color/mainItemTagTitle"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/arrow_next"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/mainItemDvider"
+            />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/exitAccountButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/mainItemDvider"
+        android:text="退出当前账号"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        />
+
+</RelativeLayout>

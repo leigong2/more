@@ -1,0 +1,93 @@
+<resources>
+    <string name="common_network_error">网络异常，请检测后重试。</string>
+
+    <string name="app_name">More摩儿</string>
+    <string name="main_item_title_zh">酒吧分类</string>
+    <string name="main_item_title_en">BAR CLASSIFICATION</string>
+    <string name="main_item_title_bizare">商圈</string>
+    <string name="main_bar_title_zh">酒吧推荐</string>
+    <string name="main_bar_title_en">BAR RECOMMENDATION</string>
+    <string name="main_packages_title_zh">优惠套餐</string>
+    <string name="main_packages_title_en">DISCOUNT PACKAGE</string>
+    <string name="main_morebar_text">查看全部酒吧</string>
+    <string name="searchentry_hostkeys">热门搜索</string>
+    <string name="searchentry_history">搜索历史</string>
+    <string name="searchentry_clearhistory">清除记录</string>
+    <string name="searchentry_search">搜索</string>
+
+    <string name="totalbars_et_hint">酒吧名，地点</string>
+    <string name="selectcity_title">切换城市</string>
+
+    <string name="ucenter_title">个人中心</string>
+    <string name="ucenter_modify">修改个人资料</string>
+    <string name="playmore_title">玩转more</string>
+    <string name="ucenter_collect">喜欢</string>
+    <string name="ucenter_bill">订单</string>
+    <string name="ucenter_vio">我的特权</string>
+    <string name="ucenter_chat_room">聊天室</string>
+    <string name="ucenter_normal_member">普通会员</string>
+    <string name="ucenter_orange_member">橙卡会员</string>
+    <string name="ucenter_black_member">黑卡会员</string>
+    <string name="ucenter_orange_discount">橙卡优惠</string>
+    <string name="ucenter_black_discount">黑卡优惠</string>
+
+    <string name="myorder_title">我的订单</string>
+
+    <string name="errcode_success">发送成功</string>
+    <string name="errcode_cancel">发送取消</string>
+    <string name="errcode_deny">发送被拒绝</string>
+    <string name="errcode_unsupported">不支持错误</string>
+    <string name="errcode_unknown">发送返回</string>
+
+    <string name="settings_title">设置</string>
+    <string name="settings_account_security">帐号设置与安全</string>
+    <string name="settings_feedback">常见问题与反馈</string>
+    <string name="settings_about">关于More</string>
+
+    <string name="feedback_title">问题反馈</string>
+    <string name="feedback_btn_text">提交问题反馈</string>
+    <string name="feedback_resp_success">问题反馈成功</string>
+    <string name="feedback_resp_failed">问题反馈失败</string>
+    <string name="feedback_content_empty">反馈内容不能为空</string>
+
+    <string name="about_desc">精选饮酒玩乐好去处</string>
+    <string name="about_user_protocol">用户协议</string>
+
+    <string name="login_account_hint_phone">登录手机号</string>
+    <string name="login_account_hint">请输入账号</string>
+    <string name="login_password_hint">请输入密码</string>
+    <string name="login_account_no_error">账号不能为空</string>
+    <string name="login_password_no_error">密码不能为空</string>
+    <string name="login_error">账号不存在或密码输入错误</string>
+    <string name="login_phone_error">手机号码有误</string>
+    <string name="login_forget">忘记密码</string>
+    <string name="login_password_error">密码错误</string>
+    <string name="login">登录</string>
+    <string name="reg_new_user">新用户注册</string>
+    <string name="no_login_enter">随便逛逛</string>
+    <string name="reg_finish">立即进入</string>
+    <string name="passwordfind">密码找回</string>
+    <string name="setting_title">设置</string>
+    <string name="question_title">问题反馈</string>
+    <string name="phone_format_error">手机号格式不正确</string>
+    <string name="password_limit">密码至少6位</string>
+    <string name="input_user_mark">请输入你的个性签名</string>
+
+    <string name="package_list_title">套餐</string>
+    <string name="pkgorder_detail_dianyuan_text">请向店员出示</string>
+
+    <string name="applyrefund_title">退款申请</string>
+    <string name="applyrefund_count">数量</string>
+    <string name="applyrefund_amount">金额</string>
+    <string name="applyrefund_reson_title">- 退款原因 -</string>
+    <string name="applyrefund_btn_text">提交申请</string>
+
+    <string name="refundaudit_title">退款审核</string>
+    <string name="refundaudit_number">退款数量</string>
+    <string name="refundaudit_amount">退款金额</string>
+    <string name="refundaudit_account">退款账户</string>
+    <string name="refundaudit_progress">- 退款进度 -</string>
+    <string name="refundaudit_submit">退款提交</string>
+    <string name="to_expand_hint">展开</string>
+    <string name="to_shrink_hint">收起</string>
+</resources>

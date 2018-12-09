@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/merchant_name"
+        android:text="威士忌"
+        android:textSize="20sp"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="16dp"
+        android:textColor="@color/abc_white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <View
+        android:id="@+id/top_line"
+        android:layout_width="wrap_content"
+        android:background="@color/sign_space_line"
+        android:layout_marginBottom="4dp"
+        android:layout_marginRight="16dp"
+        android:layout_toRightOf="@+id/merchant_name"
+        android:layout_alignBottom="@+id/merchant_name"
+        android:layout_marginLeft="16dp"
+        android:layout_height="1dp"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:src="@color/sign_space_line"
+        android:layout_alignBottom="@+id/top_line"
+        android:layout_toRightOf="@+id/top_line"
+        android:layout_marginLeft="-18dp"
+        android:layout_marginBottom="-2dp"
+        android:layout_width="4dp"
+        android:layout_height="4dp"/>
+    <ImageView
+        android:id="@+id/sign_space_icon"
+        android:layout_below="@+id/merchant_name"
+        android:layout_margin="24dp"
+        android:background="@drawable/sign_space_header_icon"
+        android:layout_width="114dp"
+        android:layout_height="114dp"/>
+
+    <LinearLayout
+        android:rotation="-30"
+        android:orientation="vertical"
+        android:layout_marginTop="-5dp"
+        android:layout_alignTop="@+id/sign_space_icon"
+        android:layout_marginLeft="80dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:src="@color/sign_space_line"
+            android:layout_marginBottom="-2dp"
+            android:layout_width="4dp"
+            android:layout_height="4dp"/>
+        <View
+            android:layout_gravity="center"
+            android:layout_width="1dp"
+            android:background="@color/sign_space_line"
+            android:layout_height="125dp"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:src="@color/sign_space_line"
+            android:layout_width="4dp"
+            android:layout_height="4dp"/>
+    </LinearLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civ_sign_space_icon"
+        android:layout_alignTop="@+id/sign_space_icon"
+        android:layout_alignBottom="@+id/sign_space_icon"
+        android:layout_alignLeft="@+id/sign_space_icon"
+        android:layout_alignRight="@+id/sign_space_icon"
+        android:padding="18dp"
+        android:src="@mipmap/ic_launcher"
+        android:layout_width="80dp"
+        android:layout_height="80dp"/>
+
+
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_toRightOf="@+id/sign_space_icon"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:layout_alignTop="@+id/sign_space_icon"
+        android:layout_marginRight="16dp"
+        android:textColor="@color/abc_white"
+        android:lineSpacingExtra="4dp"
+        android:lines="5"
+        android:textSize="14sp"
+        android:layout_alignBottom="@+id/sign_space_icon"
+        android:ellipsize="end"
+        android:text="我是内容,别忘记删除我是内容,别忘记删除我是内容,别忘记删除我是内容,别忘记删除我是内容,别忘记删除我是内容,别忘记删除我是内容,别忘记删除我是内容,别忘记删除我是内容,别忘记删除我是内容,别忘记删除我是内容,别忘记删除我是内容,别忘记删除我是内容,别忘记删除我是内容,别忘记删除我是内容,别忘记删除我是内容,别忘记删除我是内容,别忘记删除我是内容,别忘记删除"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:id="@+id/bottom_line"
+        android:layout_width="wrap_content"
+        android:background="@color/sign_space_line"
+        android:layout_marginBottom="4dp"
+        android:layout_marginRight="16dp"
+        android:layout_below="@+id/sign_space_icon"
+        android:layout_marginLeft="16dp"
+        android:layout_height="1dp"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:src="@color/sign_space_line"
+        android:layout_alignBottom="@+id/bottom_line"
+        android:layout_toLeftOf="@+id/bottom_line"
+        android:layout_marginRight="-18dp"
+        android:layout_marginBottom="-2dp"
+        android:layout_width="4dp"
+        android:layout_height="4dp"/>
+
+</RelativeLayout>

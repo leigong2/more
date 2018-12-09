@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <include layout="@layout/details_navi_bar" android:id="@+id/nav_layout"/>
+
+    <TextView
+        android:id="@+id/header_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="头像"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="48dp"
+        android:textSize="14sp"
+        android:textColor="@color/merchant_item_distance"
+        android:layout_below="@+id/nav_layout"
+        />
+
+    <ImageView
+        android:id="@+id/header_img"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_toRightOf="@+id/header_tag"
+        android:layout_below="@+id/nav_layout"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="30dp"
+        />
+
+    <TextView
+        android:id="@+id/devide1"
+        android:layout_below="@+id/header_img"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/mainItemDvider"
+        android:layout_marginTop="16dp"
+        />
+
+    <TextView
+        android:id="@+id/nick_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/devide1"
+        android:text="昵称"
+        android:textSize="14sp"
+        android:textColor="@color/merchant_item_distance"
+        />
+
+    <EditText
+        android:id="@+id/user_nick"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/devide1"
+        android:layout_toRightOf="@+id/nick_tag"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="30dp"
+        android:textSize="14sp"
+        android:textColor="@color/mainTagName"
+        android:background="@color/white"
+        android:hint="请输入你的别名"
+        android:maxLines="1"
+        android:inputType="text"
+        />
+
+    <TextView
+        android:id="@+id/devide2"
+        android:layout_below="@+id/nick_tag"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/mainItemDvider"
+        android:layout_marginTop="16dp"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/sex_lay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/devide2"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:id="@+id/user_sex_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_gravity="center_vertical"
+            android:textSize="14sp"
+            android:textColor="@color/merchant_item_distance"
+            android:text="性别"
+            />
+
+        <TextView
+            android:id="@+id/user_sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="30dp"
+            android:textSize="14sp"
+            android:textColor="@color/mainTagName"
+            android:text="请选择"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/devide3"
+        android:layout_below="@+id/sex_lay"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/mainItemDvider"
+        />
+
+    <TextView
+        android:id="@+id/sign_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="签名"
+        android:layout_below="@+id/devide3"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:textSize="14sp"
+        android:textColor="@color/merchant_item_distance"
+        />
+
+    <EditText
+        android:id="@+id/user_PersonalMark"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/devide3"
+        android:layout_toRightOf="@+id/sign_tag"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="30dp"
+        android:textSize="14sp"
+        android:textColor="@color/mainTagName"
+        android:background="@color/white"
+        android:hint="@string/input_user_mark"
+        />
+
+    <TextView
+        android:id="@+id/devide4"
+        android:layout_below="@+id/sign_tag"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/mainItemDvider"
+        android:layout_marginTop="16dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/address_lay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/devide4"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:id="@+id/address_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="所在地"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:textSize="14sp"
+            android:textColor="@color/merchant_item_distance"
+            />
+
+        <TextView
+            android:id="@+id/user_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:textSize="14sp"
+            android:textColor="@color/mainTagName"
+            android:text="你在哪里?"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/devide5"
+        android:layout_below="@+id/address_lay"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/mainItemDvider"
+        />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="14sp"
+        android:text="保存"
+        android:layout_alignParentBottom="true"
+        android:background="@color/regButton"
+        android:textColor="@color/black"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/details_navi_bar" android:id="@+id/refund_toolbar"/>
+
+    <com.jcodecraeer.xrecyclerview.XRecyclerView
+        android:layout_below="@id/refund_toolbar"
+        android:layout_marginBottom="50dp"
+        android:id="@+id/apply_fefund_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadingEdge="none"
+        android:scrollbars="none">
+
+    </com.jcodecraeer.xrecyclerview.XRecyclerView>
+    <Button
+        android:layout_alignParentBottom="true"
+        android:text="@string/applyrefund_btn_text"
+        android:id="@+id/apply_refund_submit"
+        android:layout_width="match_parent"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        style="?android:attr/borderlessButtonStyle"
+        android:background="@drawable/merchantmap_btn"
+        android:layout_margin="16dp"
+        android:layout_height="48dp" />
+</RelativeLayout>

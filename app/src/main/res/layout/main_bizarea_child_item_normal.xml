@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/main_bizarea_item_width"
+    android:layout_height="@dimen/main_bizarea_item_height"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/main_bizarea_item_logo"
+        android:layout_width="match_parent"
+        android:paddingLeft="@dimen/main_bizarea_item_padding"
+        android:paddingRight="@dimen/main_bizarea_item_padding"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:paddingLeft="@dimen/main_bizarea_title_padding"
+        android:paddingRight="@dimen/main_bizarea_title_padding"
+        android:layout_width="wrap_content"
+        android:maxLines="2"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:textColor="@color/white"
+        android:gravity="center_horizontal"
+        android:layout_centerInParent="true"
+        android:id="@+id/main_bizarea_item_name"
+        android:textSize="@dimen/main_bizarea_title_text_size" />
+
+
+
+</RelativeLayout>

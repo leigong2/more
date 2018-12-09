@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/merchant_item"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <com.moreclub.moreapp.main.ui.view.WaveView
+        android:id="@+id/home_start_merchant_circle"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/home_start_merchant_circle_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-20dp"/>
+
+    <ImageView
+        android:id="@+id/iv_new_merchant"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_alignLeft="@+id/home_start_merchant_circle"
+        android:layout_alignRight="@+id/home_start_merchant_circle"
+        android:layout_below="@+id/home_start_merchant_circle"
+        android:layout_marginTop="-15dp"
+        android:src="@drawable/d_new"
+        android:visibility="invisible"/>
+
+    <RelativeLayout
+        android:id="@+id/home_start_merchant_circle_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_marginTop="8dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/party"
+            android:layout_width="100dp"
+            android:layout_height="36dp"
+            android:layout_marginBottom="-5dp"
+            android:background="@drawable/party_starnightpage"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:lines="1"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:paddingTop="10dp"
+            android:text="Hello World"
+            android:textColor="@color/white"
+            android:textSize="11dp"
+            android:visibility="visible"/>
+
+        <com.moreclub.moreapp.main.ui.view.AutoSplitTextView
+            android:layout_centerHorizontal="true"
+            android:id="@+id/home_start_merchant_name"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/party"
+            android:layout_gravity="center_horizontal"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:lines="2"
+            android:textColor="@color/abc_white"
+            android:textSize="11dp"/>
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/iv_orange"
+            android:src="@drawable/star_orangecard"
+            android:layout_width="20dp"
+            android:layout_height="12dp"
+            android:layout_marginBottom="2dp"
+            android:scaleType="centerInside"
+            android:layout_alignLeft="@+id/home_start_merchant_name"
+            android:layout_alignBottom="@+id/home_start_merchant_name"/>
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/iv_black"
+            android:layout_width="20dp"
+            android:layout_height="12dp"
+            android:layout_marginBottom="2dp"
+            android:src="@drawable/star_blackcard"
+            android:layout_alignBottom="@+id/home_start_merchant_name"
+            android:layout_toRightOf="@+id/iv_orange"/>
+        <TextView
+            android:id="@+id/near_distance"
+            android:visibility="gone"
+            android:textSize="10dp"
+            android:layout_marginBottom="2dp"
+            android:textColor="@color/abc_black"
+            android:text=">10km"
+            android:layout_alignBottom="@+id/home_start_merchant_name"
+            android:layout_alignLeft="@+id/home_start_merchant_name"
+            android:background="@drawable/near_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

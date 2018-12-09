@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/pkgorder_detail_bg"
+    android:orientation="vertical">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civ_user_thumb"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_margin="16dp"
+        app:civ_border_color="@color/package_edittext_line"
+        app:civ_border_width="1dp"/>
+
+    <TextView
+        android:id="@+id/tv_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_toRightOf="@+id/civ_user_thumb"
+        android:textColor="@color/mainItemBarDesc"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/tv_interest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_user_name"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@+id/civ_user_thumb"
+        android:background="@drawable/interest_rect"
+        android:padding="4dp"
+        android:text="TA感兴趣"
+        android:textColor="@color/abc_black"
+        android:textSize="12sp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/has_read"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_interest"
+        android:layout_alignTop="@+id/tv_interest"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@+id/tv_interest"
+        android:background="@drawable/has_read_rect"
+        android:gravity="center"
+        android:padding="4dp"
+        android:text="已读"
+        android:textColor="@color/abc_black"
+        android:visibility="gone"/>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_reply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_user_name"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@+id/civ_user_thumb"
+        android:background="@drawable/reply_rect"
+        android:padding="4dp"
+        android:text="拼座邀请"
+        android:textColor="@color/orange"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/has_read2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_reply"
+        android:layout_alignTop="@+id/tv_reply"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@+id/tv_reply"
+        android:background="@drawable/has_read_rect"
+        android:gravity="center"
+        android:padding="4dp"
+        android:text="已读"
+        android:textColor="@color/abc_black"/>
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_user_name"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"/>
+
+    <TextView
+        android:id="@+id/tv_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/civ_user_thumb"
+        android:layout_alignRight="@+id/civ_user_thumb"
+        android:layout_below="@+id/civ_user_thumb"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="坐标 :"
+        android:textColor="@color/searchEntryTagText"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/tv_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tv_location"
+        android:layout_alignLeft="@+id/tv_user_name"
+        android:layout_alignTop="@+id/tv_location"
+        android:textColor="@color/orange"
+        android:textSize="14sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_below="@+id/tv_location"
+        android:layout_marginTop="8dp"
+        android:background="@color/mainItemDvider"
+        android:layout_height="4dp"/>
+
+</RelativeLayout>

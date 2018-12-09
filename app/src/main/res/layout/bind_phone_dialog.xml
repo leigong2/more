@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/gray_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/nav_layout"
+        android:background="#66000000"
+        android:visibility="visible"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_root"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/rect_white">
+
+        <ImageView
+            android:id="@+id/iv_cross"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="8dp"
+            android:src="@drawable/cross_popup"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_cross"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:lineSpacingExtra="8dp"
+            android:text="手机号已注册，帮你绑定第三方账户吧？"
+            android:textColor="@color/abc_black"
+            android:textSize="18dp"/>
+
+        <TextView
+            android:id="@+id/tv_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="8dp"
+            android:layout_below="@+id/tv_title"
+            android:layout_margin="16dp"
+            android:text="绑定后，手机、微信任意登录，里程、订单一个都不少"
+            android:textColor="@color/merchant_item_distance"
+            android:textSize="12sp"/>
+
+        <ImageView
+            android:id="@+id/iv_pic"
+            android:layout_width="220dp"
+            android:layout_height="37dp"
+            android:layout_below="@+id/tv_tag"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="24dp"
+            android:src="@drawable/connect_accounts"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/user_first"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignBottom="@+id/iv_pic"
+            android:layout_alignLeft="@+id/iv_pic"
+            android:layout_marginBottom="-12dp"
+            android:layout_marginRight="-24dp"
+            android:src="@drawable/profilephoto_small"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/user_second"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignBottom="@+id/iv_pic"
+            android:layout_alignRight="@+id/iv_pic"
+            android:layout_marginBottom="-12dp"
+            android:layout_marginLeft="-24dp"
+            android:src="@drawable/profilephoto_small"/>
+
+        <TextView
+            android:id="@+id/tv_user1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/iv_pic"
+            android:layout_below="@+id/iv_pic"
+            android:text="用户一"
+            android:textColor="@color/mainItemPkgTitle"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tv_user1_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_user1"
+            android:layout_below="@+id/tv_user1"
+            android:layout_marginTop="8dp"
+            android:text="第三方账户"
+            android:textColor="@color/mainTagName"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/tv_user2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/iv_pic"
+            android:layout_below="@+id/iv_pic"
+            android:text="用户二"
+            android:textColor="@color/mainItemPkgTitle"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tv_user2_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/tv_user2"
+            android:layout_below="@+id/tv_user1"
+            android:layout_marginTop="8dp"
+            android:text="186****0394"
+            android:textColor="@color/mainTagName"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/tv_make_sure"
+            android:layout_width="130dp"
+            android:layout_height="36dp"
+            android:layout_below="@+id/tv_user1_desc"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="24dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/write_message_wall"
+            android:gravity="center"
+            android:text="确定合并"
+            android:textColor="@color/abc_black"
+            android:textSize="14sp"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

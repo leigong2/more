@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/gray_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/nav_layout"
+        android:background="#66000000"
+        android:visibility="visible"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/top_layout"
+            android:layout_width="260dp"
+            android:layout_height="157dp"
+            android:background="@drawable/bg_frontpage_popup">
+
+            <ImageView
+                android:id="@+id/iv_bg"
+                android:src="@drawable/bg_upgrade"
+                android:layout_width="match_parent"
+                android:scaleType="centerCrop"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:src="@drawable/decration_line"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:id="@+id/closeW"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/cross_black"/>
+            <ImageView
+                android:id="@+id/new_app"
+                android:src="@drawable/new_balloon"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:id="@+id/new_useful_taste"
+                android:src="@drawable/new_useful_taste"
+                android:layout_toRightOf="@+id/new_app"
+                android:layout_below="@+id/new_app"
+                android:layout_marginTop="-65dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:id="@+id/whats_new"
+                android:src="@drawable/whats_new"
+                android:layout_below="@+id/new_app"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="-40dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/bottom_layout"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:lineSpacingExtra="8dp"
+                android:text="@string/update_dec"
+                android:textColor="@color/merchant_address"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/merchant_address"
+                android:layout_below="@+id/tv_title"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="14dp"
+                android:text="残忍拒绝"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/btn_make_sure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tv_title"
+                android:layout_marginBottom="20dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:text="立即升级"
+                android:textColor="@color/star_location_change"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

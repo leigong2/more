@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/refund_audit_toolbar"
+        layout="@layout/details_navi_bar" />
+
+    <LinearLayout
+        android:id="@+id/apply_refund_number_layout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/refund_audit_toolbar"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:text="@string/refundaudit_number"
+            android:textColor="@color/commonThinTextColor"
+            android:textSize="@dimen/common_text_size" />
+
+        <TextView
+            android:id="@+id/refund_audit_refund_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="16dp"
+            android:textColor="@color/commonTitleColor"
+            android:textSize="@dimen/common_text_size" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/apply_refund_number_layout_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/apply_refund_number_layout"
+        android:background="@color/mainItemDvider" />
+
+    <LinearLayout
+        android:id="@+id/apply_refund_amount_layout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/apply_refund_number_layout_divider"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:text="@string/refundaudit_amount"
+            android:textColor="@color/commonThinTextColor"
+            android:textSize="@dimen/common_text_size" />
+
+        <TextView
+            android:id="@+id/refund_audit_refund_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="16dp"
+            android:textColor="@color/commonTitleColor"
+            android:textSize="@dimen/common_text_size" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/apply_refund_amount_layout_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/apply_refund_amount_layout"
+        android:background="@color/mainItemDvider" />
+
+    <LinearLayout
+        android:id="@+id/apply_refund_account_type_layout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/apply_refund_amount_layout_divider"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:text="@string/refundaudit_account"
+            android:textColor="@color/commonThinTextColor"
+            android:textSize="@dimen/common_text_size" />
+
+        <TextView
+            android:id="@+id/refund_audit_refund_account_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="16dp"
+            android:textColor="@color/commonTitleColor"
+            android:textSize="@dimen/common_text_size" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/apply_refund_account_type_divider"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_below="@id/apply_refund_account_type_layout"
+        android:background="@color/mainItemDvider" />
+
+    <LinearLayout
+        android:id="@+id/refund_audit_progress_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/apply_refund_account_type_divider"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/refundaudit_progress"
+            android:textColor="@color/commonTitleColor"
+            android:textSize="@dimen/common_bigger_text_size"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_marginLeft="20dp"
+        android:id="@+id/refund_audit_progress_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/refund_audit_progress_title_layout"
+        android:src="@drawable/refund_steps_point" />
+
+    <TextView
+        android:layout_marginLeft="72dp"
+        android:layout_below="@id/refund_audit_progress_title_layout"
+        android:id="@+id/refund_audit_refund_text1"
+        android:layout_width="wrap_content"
+        android:text="@string/refundaudit_submit"
+        android:layout_height="wrap_content"
+        android:textColor="@color/commonThinTextColor"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="72dp"
+        android:id="@+id/refund_audit_refund_progress_text1"
+        android:layout_below="@id/refund_audit_refund_text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:text="你的退款提交申请成功。"
+        android:textColor="@color/commonThinTextColor"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_marginTop="28dp"
+        android:layout_below="@id/refund_audit_refund_progress_text1"
+        android:layout_marginLeft="72dp"
+        android:text="@string/refundaudit_submit"
+        android:id="@+id/refund_audit_refund_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:textColor="@color/commonThinTextColor"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_marginTop="4dp"
+        android:layout_below="@id/refund_audit_refund_text2"
+        android:layout_marginLeft="72dp"
+        android:id="@+id/refund_audit_refund_progress_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="退款审核已受理，我们将在1-2个工作日完成审核。"
+        android:layout_marginRight="16dp"
+        android:lineSpacingExtra="4dp"
+        android:textColor="@color/commonThinTextColor"
+        android:textSize="14sp" />
+
+    />
+
+    <TextView
+        android:layout_below="@id/refund_audit_refund_progress_text2"
+        android:layout_marginLeft="72dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/refundaudit_submit"
+        android:id="@+id/refund_audit_refund_text3"
+        android:textStyle="bold"
+        android:layout_marginRight="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_marginTop="4dp"
+        android:layout_below="@id/refund_audit_refund_text3"
+        android:layout_marginLeft="72dp"
+        android:id="@+id/refund_audit_refund_progress_text3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:lineSpacingExtra="8dp"
+        android:textColor="@color/commonThinTextColor"
+        android:text="退款至原账户，请在1-7个工作日查收。"
+        android:textSize="14sp" />
+
+
+    <TextView
+        android:id="@+id/refund_audit_contact_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:text="退款未如期到账？联系客服"
+        android:textColor="@color/orangeText"
+        android:textSize="14sp" />
+</RelativeLayout>

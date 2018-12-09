@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home_star_bg"
+    android:orientation="vertical"
+    tools:context=".main.ui.activity.MerchantListViewActivity">
+
+    <include
+        android:id="@+id/nav_layout"
+        layout="@layout/details_navi_bar"/>
+
+    <TextView
+        android:id="@+id/empty_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:lineSpacingExtra="8dp"
+        android:padding="16dp"
+        android:text="@string/empty_text"
+        android:textColor="@color/mainTagName"
+        android:visibility="gone"/>
+
+    <com.jcodecraeer.xrecyclerview.XRecyclerView
+        android:id="@+id/xRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadingEdge="none"
+        android:scrollbars="none">
+    </com.jcodecraeer.xrecyclerview.XRecyclerView>
+
+
+    <ImageView
+        android:id="@+id/iv_addpinzuo"
+        android:src="@drawable/addpinzuo"
+        android:background="@drawable/indicater_selected_circle"
+        android:layout_gravity="bottom|right"
+        android:padding="8dp"
+        android:translationY="-65dp"
+        android:translationX="-15dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"/>
+
+</LinearLayout>

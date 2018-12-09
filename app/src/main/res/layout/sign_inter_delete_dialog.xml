@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="280dp"
+    android:layout_gravity="center"
+    android:background="@color/abc_white"
+    android:layout_height="114dp">
+
+    <TextView
+        android:id="@+id/title"
+        android:textSize="16dp"
+        android:textColor="@color/mainItemBarDesc"
+        android:padding="24dp"
+        android:text="确定要删除这条拼座消息吗？"
+        android:lines="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/delete"
+        android:layout_below="@+id/title"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="8dp"
+        android:text="删除"
+        android:textSize="14sp"
+        android:background="@color/abc_white"
+        android:textColor="@color/mainItemPkgBar"
+        android:layout_width="75dp"
+        android:layout_height="36dp"/>
+    <TextView
+        android:layout_toLeftOf="@+id/delete"
+        android:id="@+id/cancel"
+        android:layout_below="@+id/title"
+        android:layout_marginRight="8dp"
+        android:text="取消"
+        android:textSize="14sp"
+        android:background="@color/abc_white"
+        android:textColor="@color/mainItemPkgBar"
+        android:layout_width="75dp"
+        android:layout_height="36dp"/>
+
+</RelativeLayout>

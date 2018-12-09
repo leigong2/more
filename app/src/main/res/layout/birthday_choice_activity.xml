@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/abc_white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/nav_layout"
+        layout="@layout/details_navi_bar"/>
+
+    <TextView
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/activity_title"
+        android:layout_gravity="end"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="-36dp"
+        android:text="保存"
+        android:textColor="@color/orange"
+        android:textSize="14sp"/>
+
+    <include
+        android:id="@+id/birthday_lay"
+        android:layout_marginTop="20dp"
+        layout="@layout/user_modify_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+
+    <View
+        android:id="@+id/devide1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/mainItemDvider"/>
+
+    <include
+        android:id="@+id/star_lay"
+        layout="@layout/user_modify_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+
+    <View
+        android:id="@+id/devide2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/mainItemDvider"/>
+
+    <include
+        android:id="@+id/age_lay"
+        layout="@layout/user_modify_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+
+    <View
+        android:id="@+id/devide3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/mainItemDvider"/>
+
+
+</LinearLayout>

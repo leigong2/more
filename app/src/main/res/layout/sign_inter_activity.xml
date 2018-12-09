@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/abc_black"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageButton
+        android:id="@+id/nav_back"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center_vertical"
+        android:background="@color/abc_black"
+        android:src="@drawable/btn_back_white" />
+    
+    <com.gigamole.navigationtabstrip.NavigationTabStrip
+        android:layout_toRightOf="@+id/nav_back"
+        android:background="@color/abc_black"
+        android:id="@+id/sign_title"
+        android:layout_width="216dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="32dp"
+        app:nts_active_color="@color/abc_white"
+        app:nts_animation_duration="200"
+        app:nts_color="@color/mainTagName"
+        app:nts_corners_radius="1dp"
+        app:nts_factor="2"
+        app:nts_gravity="bottom"
+        app:nts_inactive_color="@color/abc_white"
+        app:nts_size="14sp"
+        app:nts_titles="@array/sign_inter_titles"
+        app:nts_type="line"
+        app:nts_weight="2dp" />
+
+    <ImageButton
+        android:id="@+id/ib_report"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/moreaction"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/iv_addpinzuo"
+        android:layout_alignEnd="@+id/iv_addpinzuo"/>
+
+    <View
+        android:id="@+id/view_weight"
+        android:layout_width="match_parent"
+        android:background="@color/abc_black"
+        android:layout_below="@+id/sign_title"
+        android:layout_height="4dp"/>
+
+
+    <ImageView
+        android:visibility="visible"
+        android:layout_below="@+id/view_weight"
+        android:layout_width="match_parent"
+        android:background="@drawable/home_star_bg"
+        android:scaleType="centerCrop"
+        android:layout_height="match_parent"/>
+
+    <android.support.v4.view.ViewPager
+        android:layout_below="@+id/view_weight"
+        android:id="@+id/sign_inter_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v4.view.ViewPager>
+
+
+    <ImageView
+        android:id="@+id/iv_addpinzuo"
+        android:src="@drawable/addpinzuo"
+        android:background="@drawable/indicater_selected_circle"
+        android:layout_gravity="bottom|right"
+        android:padding="8dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="14dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="15dp"/>
+
+</RelativeLayout>

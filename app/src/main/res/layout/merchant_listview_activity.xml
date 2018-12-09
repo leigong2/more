@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/merchant_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".main.ui.activity.MerchantListViewActivity">
+
+    <include layout="@layout/details_navi_bar" android:id="@+id/nav_layout"/>
+
+    <com.jcodecraeer.xrecyclerview.XRecyclerView
+        android:id="@+id/merchant_rv"
+        android:layout_width="match_parent"
+        android:fadingEdge="none"
+        android:scrollbars="none"
+        android:layout_height="match_parent">
+    </com.jcodecraeer.xrecyclerview.XRecyclerView>
+
+</LinearLayout>

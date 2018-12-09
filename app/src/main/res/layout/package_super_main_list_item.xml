@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/package_image_banner_iv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/package_super_main_list_image"
+        android:layout_alignParentTop="true"
+        android:layout_margin="16dp"
+        android:scaleType="centerCrop" />
+
+    <ImageButton
+        android:id="@+id/package_collect_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/collect_fav_highlight"
+        android:layout_alignRight="@+id/package_image_banner_iv"
+        android:layout_marginRight="16dp"
+        android:layout_alignTop="@+id/package_image_banner_iv"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/transparent"
+        />
+
+    <TextView
+        android:id="@+id/package_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/package_image_banner_iv"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:lines="1"
+        android:text="adad"
+        android:textColor="@color/mainItemTagTitle"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/package_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/package_title"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:textColor="@color/package_list_tag"
+        android:text="adad"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/package_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/package_title"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/bill_total_price"
+        android:text="adad"
+        android:textSize="14sp"
+        android:layout_toRightOf="@+id/package_tag" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/mainItemDvider"
+        android:layout_below="@+id/package_price"
+        android:layout_marginTop="16dp"
+        />
+
+
+</RelativeLayout>

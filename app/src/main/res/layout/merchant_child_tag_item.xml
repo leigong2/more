@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/main_bartag_item_width"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/main_bartag_logo"
+        android:layout_width="@dimen/main_bartag_item_width"
+        android:scaleType="fitCenter"
+        android:layout_gravity="center_horizontal"
+        android:visibility="visible"
+        android:gravity="center_horizontal"
+        android:layout_height="@dimen/main_bartag_logo_height" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/mainItemTagTitle"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="4dp"
+        android:visibility="visible"
+        android:id="@+id/main_bartag_name"
+        android:textSize="@dimen/main_bartag_tag_size" />
+
+
+    <RelativeLayout
+        android:id="@+id/music_bartag_logo"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="19dp"
+        android:visibility="gone"
+        >
+
+        <ImageView
+            android:id="@+id/music_bartag_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/business_music_bg"
+            android:layout_centerInParent="true"
+            />
+
+
+        <ImageView
+            android:id="@+id/music_bartag_start"
+            android:layout_width="20dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/business_play_start"
+            android:layout_centerInParent="true"
+            android:paddingLeft="@dimen/main_bizarea_item_padding"
+            android:paddingRight="@dimen/main_bizarea_item_padding"
+            android:layout_height="20dp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="78dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/mainItemTagTitle"
+        android:gravity="center_horizontal"
+        android:visibility="gone"
+        android:layout_marginTop="4dp"
+        android:text="常播"
+        android:id="@+id/music_bartag_name"
+        android:textSize="@dimen/main_bartag_tag_size" />
+
+</LinearLayout>

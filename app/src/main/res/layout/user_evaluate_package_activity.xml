@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:rb="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <include
+        android:id="@+id/nav_layout"
+        layout="@layout/details_navi_bar"
+        />
+    <com.moreclub.common.ui.view.scrollview.ObservableScrollView
+        android:id="@+id/detailsScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fadingEdgeLength="0dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/package_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:textSize="20sp"
+                android:textColor="@color/mainItemTagTitle"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/mainItemDvider"
+                android:layout_marginTop="16dp"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="59dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="套餐评价"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    />
+
+                <com.moreclub.moreapp.ucenter.ui.view.ColoredRatingBar
+                    android:id="@+id/package_evaluate"
+                    style="@style/coloredRatingBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="16dp"
+                    rb:rating="0" />
+
+            </RelativeLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/mainItemDvider"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="59dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="音乐调性"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    />
+                <com.moreclub.moreapp.ucenter.ui.view.ColoredRatingBar
+                    android:id="@+id/music_evaluate"
+                    style="@style/coloredRatingBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="16dp"
+                    rb:rating="0" />
+            </RelativeLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/mainItemDvider"
+                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="59dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="环境风景"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    />
+                <com.moreclub.moreapp.ucenter.ui.view.ColoredRatingBar
+                    android:id="@+id/environment_evaluate"
+                    style="@style/coloredRatingBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="16dp"
+                    rb:rating="0" />
+            </RelativeLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/mainItemDvider"
+                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="59dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="服务设施"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    />
+                <com.moreclub.moreapp.ucenter.ui.view.ColoredRatingBar
+                    android:id="@+id/server_evaluate"
+                    style="@style/coloredRatingBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="16dp"
+                    rb:rating="0" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/mainItemDvider"
+                android:layout_marginTop="16dp"
+                />
+
+            <EditText
+                android:id="@+id/evaluate_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:hint="请帮助我们改善服务哦"
+                android:textSize="14sp"
+                android:textColor="@color/mainItemBarDesc"
+                android:textColorHint="@color/mainTagName"
+                android:background="@android:color/transparent"
+                android:lineSpacingExtra="5dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/mainItemDvider"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                />
+
+            <TextView
+                android:id="@+id/word_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="8dp"
+                android:gravity="right"
+                android:textColor="@color/merchant_item_distance"
+                android:text="0/50"
+                />
+
+            <com.moreclub.moreapp.main.ui.view.CustomGridView
+                android:id="@+id/picgridView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="8dp"
+                android:fadingEdge="none"
+                android:horizontalSpacing="8dp"
+                android:numColumns="4"
+                android:scrollbars="none"
+                android:verticalSpacing="10dp">
+            </com.moreclub.moreapp.main.ui.view.CustomGridView>
+
+            <Button
+                android:id="@+id/evaluateButton"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/merchantmap_btn"
+                android:text="@string/evaluate_button"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="16dp"
+                android:textColor="@color/black"
+                />
+
+    </LinearLayout>
+
+    </com.moreclub.common.ui.view.scrollview.ObservableScrollView>
+
+
+</LinearLayout>

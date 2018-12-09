@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:hyphenate="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:animateLayoutChanges="true"
+                android:background="#f2f0eb">
+
+    <com.hyphenate.easeui.widget.EaseTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        hyphenate:titleBarLeftImage="@drawable/btn_back_white"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/input_menu"
+        android:layout_below="@id/title_bar">
+
+        <RelativeLayout
+            android:id="@+id/interest_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/abc_white"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="8dp"
+                android:drawableRight="@drawable/ucenter_triangle"
+                android:padding="16dp"
+                android:text="TA对您的拼座感兴趣"
+                android:textColor="@color/mainItemBarDesc"
+                android:textSize="14sp"/>
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_old"
+                android:text="已过期"
+                android:layout_toRightOf="@+id/tv_name"
+                android:layout_marginTop="14dp"
+                android:gravity="center"
+                android:padding="2dp"
+                android:background="@drawable/has_read_rect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tv_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_name"
+                android:layout_marginLeft="16dp"
+                android:text="坐标 :"
+                android:textColor="@color/mainTagName"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/tv_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tv_location"
+                android:layout_alignTop="@+id/tv_location"
+                android:layout_toRightOf="@+id/tv_location"
+                android:paddingLeft="16dp"
+                android:textColor="@color/mainItemPkgBar"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_allow"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_alignParentRight="true"
+                android:layout_margin="16dp"
+                android:background="@drawable/interest_rect"
+                android:gravity="center"
+                android:text="通过"
+                android:textColor="@color/abc_black"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_allow_dead"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_alignParentRight="true"
+                android:layout_margin="16dp"
+                android:background="@drawable/dead_rect"
+                android:gravity="center"
+                android:text="通过"
+                android:textColor="@color/abc_black"
+                android:textSize="14sp"/>
+
+
+
+            <TextView
+                android:id="@+id/tv_answer"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_alignParentRight="true"
+                android:layout_margin="16dp"
+                android:background="@drawable/reply_rect"
+                android:gravity="center"
+                android:text="接受"
+                android:textColor="@color/orange"
+                android:textSize="14sp"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/tv_answer_dead"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_alignParentRight="true"
+                android:layout_margin="16dp"
+                android:background="@drawable/dead_rect"
+                android:gravity="center"
+                android:text="接受"
+                android:textColor="@color/orange"
+                android:textSize="14sp"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/allowed"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_alignParentRight="true"
+                android:layout_margin="16dp"
+                android:src="@drawable/pinzuo_yes"
+                android:textSize="14sp"
+                android:visibility="gone"/>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="2dp"
+                android:layout_below="@+id/tv_location"
+                android:layout_marginTop="14dp"
+                android:background="@color/package_edittext_line"/>
+
+        </RelativeLayout>
+
+        <com.hyphenate.easeui.widget.EaseChatMessageList
+            android:id="@+id/message_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/interest_layout"/>
+
+        <com.hyphenate.easeui.widget.EaseVoiceRecorderView
+            android:id="@+id/voice_recorder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="invisible"/>
+    </RelativeLayout>
+
+    <com.hyphenate.easeui.widget.EaseChatInputMenu
+        android:id="@+id/input_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
